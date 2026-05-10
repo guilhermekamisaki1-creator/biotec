@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula Completa de Biotecnologia – Vestibular 2026</title>
+<style>
+  :root{
+    --verde-escuro:#0f3d2e;
+    --verde:#1a6b4f;
+    --verde-claro:#2c9272;
+    --verde-suave:#e8f4ef;
+    --azul:#1d4ed8;
+    --azul-suave:#eef4ff;
+    --vermelho:#b91c1c;
+    --vermelho-suave:#fee2e2;
+    --amarelo:#f59e0b;
+    --amarelo-suave:#fef3c7;
+    --roxo:#7c3aed;
+    --roxo-suave:#f3eaff;
+    --cinza:#374151;
+    --cinza-claro:#f3f4f6;
+    --branco:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.7;
+    color:var(--cinza);
+    background:#fafafa;
+  }
+  header.hero{
+    background:linear-gradient(135deg,var(--verde-escuro) 0%,var(--verde) 70%,var(--verde-claro) 100%);
+    color:white;
+    padding:60px 20px 50px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header.hero::before{
+    content:"🧬";
+    position:absolute;
+    font-size:200px;
+    opacity:0.07;
+    right:5%;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  header.hero h1{
+    font-size:2.8em;
+    font-weight:800;
+    margin-bottom:10px;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.2);
+  }
+  header.hero p.subtitulo{
+    font-size:1.2em;
+    opacity:0.95;
+    max-width:800px;
+    margin:0 auto;
+  }
+  header.hero .badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.2);
+    padding:6px 18px;
+    border-radius:25px;
+    font-size:0.95em;
+    margin-top:18px;
+    border:1px solid rgba(255,255,255,0.3);
+  }
+  nav.sumario{
+    background:white;
+    max-width:1100px;
+    margin:-30px auto 40px;
+    padding:25px 30px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border-top:5px solid var(--verde-claro);
+  }
+  nav.sumario h2{
+    color:var(--verde-escuro);
+    margin-bottom:15px;
+    font-size:1.4em;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  nav.sumario ol{
+    columns:2;
+    column-gap:30px;
+    padding-left:20px;
+  }
+  nav.sumario li{
+    margin-bottom:8px;
+    break-inside:avoid;
+  }
+  nav.sumario a{
+    color:var(--verde);
+    text-decoration:none;
+    font-weight:500;
+    transition:color 0.2s;
+  }
+  nav.sumario a:hover{
+    color:var(--verde-claro);
+    text-decoration:underline;
+  }
+  main{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px 60px;
+  }
+  section.topico{
+    background:white;
+    margin-bottom:35px;
+    padding:35px 40px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    border-left:6px solid var(--verde-claro);
+  }
+  section.topico h2{
+    color:var(--verde-escuro);
+    font-size:1.9em;
+    margin-bottom:8px;
+    padding-bottom:12px;
+    border-bottom:2px solid var(--verde-suave);
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  section.topico h2 .num{
+    background:var(--verde-claro);
+    color:white;
+    font-size:0.7em;
+    padding:6px 14px;
+    border-radius:10px;
+    font-weight:700;
+  }
+  section.topico h3{
+    color:var(--verde);
+    font-size:1.4em;
+    margin:25px 0 12px;
+    padding-left:12px;
+    border-left:4px solid var(--verde-claro);
+  }
+  section.topico h4{
+    color:var(--verde-escuro);
+    font-size:1.15em;
+    margin:18px 0 8px;
+    font-weight:700;
+  }
+  section.topico p{
+    margin-bottom:14px;
+    text-align:justify;
+  }
+  section.topico ul, section.topico ol{
+    padding-left:28px;
+    margin-bottom:14px;
+  }
+  section.topico li{
+    margin-bottom:6px;
+  }
+  .destaque{
+    background:var(--amarelo-suave);
+    border-left:5px solid var(--amarelo);
+    padding:15px 20px;
+    border-radius:8px;
+    margin:18px 0;
+  }
+  .destaque strong{color:#92400e}
+  .definicao{
+    background:var(--azul-suave);
+    border-left:5px solid var(--azul);
+    padding:15px 20px;
+    border-radius:8px;
+    margin:18px 0;
+  }
+  .definicao strong{color:#1e40af}
+  .alerta{
+    background:var(--vermelho-suave);
+    border-left:5px solid var(--vermelho);
+    padding:15px 20px;
+    border-radius:8px;
+    margin:18px 0;
+  }
+  .alerta strong{color:#991b1b}
+  .complemento{
+    background:var(--roxo-suave);
+    border-left:5px solid var(--roxo);
+    padding:15px 20px;
+    border-radius:8px;
+    margin:18px 0;
+    font-size:0.97em;
+  }
+  .complemento strong{color:#5b21b6}
+  .complemento::before{
+    content:"💡 Complemento para melhor compreensão:";
+    display:block;
+    font-weight:700;
+    color:#5b21b6;
+    margin-bottom:8px;
+    font-size:1.05em;
+  }
+  .pegadinha{
+    background:#fff7ed;
+    border-left:5px solid #ea580c;
+    padding:15px 20px;
+    border-radius:8px;
+    margin:18px 0;
+  }
+  .pegadinha::before{
+    content:"⚠️ PEGADINHA DE VESTIBULAR";
+    display:block;
+    font-weight:700;
+    color:#9a3412;
+    margin-bottom:8px;
+    letter-spacing:0.5px;
+  }
+  .vestibular{
+    background:linear-gradient(135deg,#0f3d2e 0%,#1a6b4f 100%);
+    color:white;
+    padding:18px 22px;
+    border-radius:8px;
+    margin:18px 0;
+  }
+  .vestibular::before{
+    content:"🎯 O QUE MAIS CAI EM VESTIBULAR";
+    display:block;
+    font-weight:700;
+    margin-bottom:10px;
+    font-size:1.05em;
+    letter-spacing:0.5px;
+  }
+  .vestibular ul{padding-left:22px}
+  .vestibular li{margin-bottom:5px}
+  .esquema{
+    background:var(--cinza-claro);
+    border:2px dashed var(--verde);
+    border-radius:10px;
+    padding:18px 20px;
+    margin:20px 0;
+    font-family:'Courier New', monospace;
+    font-size:0.95em;
+    white-space:pre-wrap;
+    overflow-x:auto;
+    line-height:1.5;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  th{
+    background:var(--verde);
+    color:white;
+    padding:12px 14px;
+    text-align:left;
+    font-weight:700;
+  }
+  td{
+    padding:12px 14px;
+    border-bottom:1px solid #e5e7eb;
+  }
+  tr:nth-child(even) td{background:var(--verde-suave)}
+  tr:last-child td{border-bottom:none}
+  .questao{
+    background:#f0f9ff;
+    border:2px solid var(--azul);
+    border-radius:10px;
+    padding:20px 25px;
+    margin:25px 0;
+  }
+  .questao h4{
+    color:var(--azul);
+    font-size:1.2em;
+    margin-bottom:12px;
+  }
+  .resposta{
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    padding:15px 20px;
+    border-radius:8px;
+    margin-top:15px;
+  }
+  .resposta strong{color:#15803d}
+  .video-card{
+    background:linear-gradient(135deg,#fff 0%,#f9fafb 100%);
+    border:2px solid var(--verde-claro);
+    border-radius:12px;
+    padding:18px 22px;
+    margin:15px 0;
+    transition:all 0.2s;
+  }
+  .video-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  }
+  .video-card .titulo-video{
+    color:var(--verde-escuro);
+    font-weight:700;
+    font-size:1.1em;
+    margin-bottom:6px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .video-card .professor{
+    color:var(--verde);
+    font-size:0.95em;
+    margin-bottom:8px;
+  }
+  .video-card a{
+    display:inline-block;
+    background:var(--vermelho);
+    color:white;
+    padding:8px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:0.92em;
+    font-weight:600;
+    margin-top:8px;
+    transition:background 0.2s;
+  }
+  .video-card a:hover{background:#991b1b}
+  .video-card .descricao{
+    color:#4b5563;
+    font-size:0.95em;
+    margin-bottom:6px;
+  }
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin:18px 0;
+  }
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:18px 0;
+  }
+  .card{
+    background:var(--verde-suave);
+    border-radius:10px;
+    padding:18px;
+    border-top:4px solid var(--verde-claro);
+  }
+  .card h4{
+    color:var(--verde-escuro);
+    margin-bottom:8px;
+  }
+  .timeline{
+    position:relative;
+    padding-left:30px;
+    margin:20px 0;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:var(--verde-claro);
+  }
+  .timeline-item{
+    position:relative;
+    padding-bottom:18px;
+  }
+  .timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-26px;
+    top:6px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--verde);
+    border:3px solid white;
+    box-shadow:0 0 0 2px var(--verde);
+  }
+  .timeline-item strong{color:var(--verde-escuro)}
+  .revisao-final{
+    background:linear-gradient(135deg,var(--verde-escuro) 0%,var(--verde) 100%);
+    color:white;
+    padding:40px;
+    border-radius:14px;
+    margin-top:40px;
+  }
+  .revisao-final h2{
+    color:white !important;
+    border-bottom:2px solid rgba(255,255,255,0.3) !important;
+  }
+  .revisao-final h3{
+    color:#a7f3d0 !important;
+    border-left-color:#a7f3d0 !important;
+  }
+  .revisao-final ul li::marker{color:#a7f3d0}
+  footer{
+    text-align:center;
+    padding:30px 20px;
+    color:#6b7280;
+    font-size:0.9em;
+    border-top:1px solid #e5e7eb;
+    background:white;
+  }
+  .icone{font-size:1.4em;margin-right:8px}
+  @media (max-width:768px){
+    header.hero h1{font-size:2em}
+    nav.sumario ol{columns:1}
+    section.topico{padding:25px 20px}
+    section.topico h2{font-size:1.5em}
+    .grid-2,.grid-3{grid-template-columns:1fr}
+    .esquema{font-size:0.8em}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>🧬 Aula Completa de Biotecnologia</h1>
+  <p class="subtitulo">Do zero ao avançado — toda a matéria do slide explicada com profundidade, didática e foco em vestibular</p>
+  <div class="badge">📚 2º ano EM | Preparação para vestibulares concorridos</div>
+</header>
+
+<nav class="sumario">
+  <h2>📑 Sumário da Aula</h2>
+  <ol>
+    <li><a href="#sec1">O que é Biotecnologia + Definição da ONU</a></li>
+    <li><a href="#sec2">Breve Histórico da Biotecnologia</a></li>
+    <li><a href="#sec3">PCR – Reação em Cadeia da Polimerase</a></li>
+    <li><a href="#sec4">RT-PCR (e a Covid-19)</a></li>
+    <li><a href="#sec5">DNA Fingerprint (Impressão Digital Genética)</a></li>
+    <li><a href="#sec6">Eletroforese</a></li>
+    <li><a href="#sec7">Teste de Paternidade</a></li>
+    <li><a href="#sec8">Cena de Crime e Identificação Genética</a></li>
+    <li><a href="#sec9">Clonagem (a Ovelha Dolly)</a></li>
+    <li><a href="#sec10">Células-tronco</a></li>
+    <li><a href="#sec11">Lei de Biossegurança (Lei 11.105/2005)</a></li>
+    <li><a href="#sec12">Desdiferenciação e iPSC</a></li>
+    <li><a href="#sec13">DNA Recombinante e Vetores</a></li>
+    <li><a href="#sec14">Enzimas de Restrição (Endonucleases)</a></li>
+    <li><a href="#sec15">DNA Ligase</a></li>
+    <li><a href="#sec16">Clonagem de DNA e Produção de Insulina</a></li>
+    <li><a href="#sec17">Engenharia Genética e Transgênicos</a></li>
+    <li><a href="#sec18">Plantas Transgênicas (Soja RR, Bt)</a></li>
+    <li><a href="#sec19">FIV e Animais Transgênicos</a></li>
+    <li><a href="#sec20">Benefícios e Riscos dos Transgênicos</a></li>
+    <li><a href="#sec21">CRISPR-Cas9 (Edição Gênica Moderna)</a></li>
+    <li><a href="#sec22">Terapia Gênica</a></li>
+    <li><a href="#sec23">Questões Resolvidas (UNIFESP 2017 e UNICAMP 2025)</a></li>
+    <li><a href="#sec24">Pegadinhas e Erros Frequentes</a></li>
+    <li><a href="#sec25">Vídeos Recomendados (YouTube)</a></li>
+    <li><a href="#sec26">Revisão Final</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ============ VISÃO GERAL ============ -->
+<section class="topico">
+  <h2><span class="num">📖</span>Visão Geral do Tema</h2>
+  <p>A <strong>Biotecnologia</strong> é uma das áreas mais quentes da Biologia moderna e cai com muita frequência nos vestibulares mais concorridos do Brasil (FUVEST, UNICAMP, UNIFESP, ENEM, UERJ). É um tema que combina <strong>Genética</strong>, <strong>Biologia Molecular</strong>, <strong>Microbiologia</strong> e até questões de <strong>Bioética</strong>.</p>
+  <p>Nesta aula vamos percorrer toda a trajetória da biotecnologia: desde a fermentação usada há 6 mil anos para fazer pão e cerveja, passando por técnicas laboratoriais como <strong>PCR, eletroforese e DNA recombinante</strong>, até as fronteiras atuais com <strong>CRISPR-Cas9</strong> e <strong>terapia gênica</strong>. Você vai entender o "como funciona", o "por que funciona" e as <strong>aplicações práticas</strong> de cada técnica.</p>
+  <div class="destaque">
+    <strong>📌 Por que estudar isso é importante para o vestibular?</strong> A biotecnologia conecta <em>vários</em> assuntos do Ensino Médio: estrutura do DNA, replicação, transcrição, tradução, divisão celular, herança genética, evolução e ecologia (transgênicos). Uma única questão pode misturar tudo isso!
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 1: O QUE É ============ -->
+<section class="topico" id="sec1">
+  <h2><span class="num">1</span>O Que é Biotecnologia?</h2>
+
+  <h3>Definição oficial (ONU – Convenção da Biodiversidade, 1992, Art. 2)</h3>
+  <div class="definicao">
+    <strong>Biotecnologia:</strong> "Qualquer aplicação tecnológica que utilize sistemas biológicos, organismos vivos, ou seus derivados, para fabricar ou modificar produtos ou processos para utilização específica."
+  </div>
+
+  <p>Vamos quebrar essa definição em três partes para entender bem:</p>
+
+  <ol>
+    <li><strong>"Aplicação tecnológica"</strong> → não é ciência pura; é ciência aplicada para resolver um problema prático.</li>
+    <li><strong>"Que utiliza sistemas biológicos, organismos vivos ou seus derivados"</strong> → usa <em>vida</em> (bactérias, leveduras, células animais, plantas, vírus) ou produtos da vida (enzimas, DNA, proteínas).</li>
+    <li><strong>"Para fabricar ou modificar produtos ou processos"</strong> → o objetivo final é obter algo útil: um remédio, um alimento, um diagnóstico, uma planta resistente, etc.</li>
+  </ol>
+
+  <h4>Exemplos do dia a dia que já são biotecnologia:</h4>
+  <div class="grid-3">
+    <div class="card"><h4>🍞 Pão e cerveja</h4><p>Fermentação por leveduras (<em>Saccharomyces cerevisiae</em>).</p></div>
+    <div class="card"><h4>🧀 Queijo e iogurte</h4><p>Bactérias lácticas transformando o leite.</p></div>
+    <div class="card"><h4>💊 Insulina sintética</h4><p>Bactérias geneticamente modificadas produzindo a insulina humana.</p></div>
+  </div>
+
+  <div class="pegadinha">
+    Muito aluno acha que biotecnologia é <em>só</em> coisa moderna como transgênicos e CRISPR. <strong>Errado!</strong> A fermentação para fazer pão é biotecnologia tradicional, com mais de 6 mil anos. Vestibular adora cobrar essa diferença entre <em>biotecnologia clássica</em> (fermentação, melhoramento genético tradicional) e <em>biotecnologia moderna</em> (engenharia genética, DNA recombinante).
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 2: HISTÓRICO ============ -->
+<section class="topico" id="sec2">
+  <h2><span class="num">2</span>Breve Histórico da Biotecnologia</h2>
+
+  <p>O slide traz uma linha do tempo essencial. Vamos analisar cada marco com profundidade:</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>+ 6.000 anos atrás:</strong> Processo de <strong>fermentação</strong> para a produção de alimentos e bebidas. Os povos antigos já usavam leveduras e bactérias sem saber que existiam. Era a "biotecnologia empírica" — funcionava, mas ninguém sabia explicar por quê.
+    </div>
+    <div class="timeline-item">
+      <strong>Século XVII:</strong> <strong>Anton Van Leeuwenhoek</strong> descobre a existência de microorganismos usando o microscópio. Pela primeira vez, vemos os "animálculos" — bactérias e protozoários. Isso é o primeiro passo para entender que existe vida microscópica.
+    </div>
+    <div class="timeline-item">
+      <strong>1876:</strong> <strong>Louis Pasteur</strong> comprova que os microorganismos são responsáveis pela fermentação. Esse é um marco gigantesco: a fermentação deixa de ser "mágica" e vira ciência. Pasteur destruiu de vez a teoria da geração espontânea.
+    </div>
+    <div class="timeline-item">
+      <strong>1919:</strong> <strong>Karl Ereky</strong>, engenheiro agrônomo húngaro, cria o termo <em>biotecnologia</em>. A palavra nasce ligada à produção agrícola, mas vai se expandir muito além disso.
+    </div>
+    <div class="timeline-item">
+      <strong>Período de guerras (I e II Guerras Mundiais):</strong> Estudos para a fabricação de explosivos e munições usando produtos biotecnológicos. As guerras aceleraram pesquisas que depois viraram aplicações civis.
+    </div>
+    <div class="timeline-item">
+      <strong>1928:</strong> <strong>Alexander Fleming</strong> descobre a <strong>penicilina</strong> — o primeiro antibiótico. Foi por acaso: um fungo (<em>Penicillium</em>) contaminou uma placa de bactérias e Fleming notou que matava elas. Revolucionou a medicina.
+    </div>
+    <div class="timeline-item">
+      <strong>1953:</strong> <strong>Watson e Crick</strong> apresentam o modelo da estrutura do DNA — a famosa <strong>dupla hélice</strong>. Sem isso, nada da biotecnologia moderna seria possível, porque ninguém saberia o que estava manipulando. (Atenção: Rosalind Franklin foi fundamental, com a Foto 51 de difração de raios X — ponto que vestibular pode cobrar!)
+    </div>
+    <div class="timeline-item">
+      <strong>1978:</strong> Isolam <strong>enzimas de restrição</strong> pela primeira vez. Essas "tesouras moleculares" abriram a porta para a engenharia genética. Sem elas, não cortamos o DNA com precisão e nada de DNA recombinante funciona.
+    </div>
+  </div>
+
+  <div class="complemento">
+    Outros marcos importantes que costumam aparecer em vestibular: <strong>1973</strong> — Cohen e Boyer fazem o primeiro experimento de DNA recombinante; <strong>1982</strong> — primeira insulina humana produzida por bactérias liberada para uso clínico; <strong>1996</strong> — nasce a ovelha Dolly (primeiro mamífero clonado a partir de célula adulta); <strong>2003</strong> — fim do Projeto Genoma Humano; <strong>2012</strong> — Doudna e Charpentier descrevem o sistema CRISPR-Cas9 (Nobel de Química 2020).
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>A diferença entre biotecnologia <strong>clássica</strong> (fermentação, seleção artificial) e <strong>moderna</strong> (DNA recombinante).</li>
+      <li>Quem descobriu o quê: Pasteur (fermentação), Fleming (penicilina), Watson-Crick (DNA).</li>
+      <li>O papel das enzimas de restrição como "tesouras" (1978) na história.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 3: PCR ============ -->
+<section class="topico" id="sec3">
+  <h2><span class="num">3</span>PCR – Reação em Cadeia da Polimerase</h2>
+
+  <p>A PCR (do inglês <em>Polymerase Chain Reaction</em>) é uma técnica que <strong>amplifica</strong> (multiplica) milhões de cópias de um trecho específico de DNA a partir de uma amostra muito pequena. Foi inventada por <strong>Kary Mullis</strong> em 1983 — Nobel de Química 1993. É a técnica mais usada em laboratórios de biologia molecular do mundo todo.</p>
+
+  <div class="definicao">
+    <strong>O objetivo da PCR:</strong> a partir de pouquíssimas moléculas de DNA, produzir <strong>milhões ou bilhões de cópias</strong> em poucas horas — basicamente, é uma "fotocópia molecular" exponencial.
+  </div>
+
+  <h3>As três etapas da PCR (decora isso!)</h3>
+
+  <p>O slide deixa muito claro que a PCR tem <strong>3 etapas que se repetem em ciclos</strong>:</p>
+
+  <h4>1️⃣ Desnaturação (≈ 95 °C)</h4>
+  <p><strong>Aquecimento</strong> para separar (desnaturar) a fita de DNA. As pontes de hidrogênio entre as bases se rompem com o calor, e a dupla hélice se abre em duas fitas simples.</p>
+  <div class="esquema">
+ANTES (DNA dupla fita):       DEPOIS (95 °C):
+5'─A─T─C─G─A─T─3'              5'─A─T─C─G─A─T─3'
+   |  |  |  |  |  |                                
+3'─T─A─G─C─T─A─5'              3'─T─A─G─C─T─A─5'
+   ↑                                   ↑
+pontes de H ligadas               separadas — duas fitas simples
+  </div>
+
+  <h4>2️⃣ Anelamento ou Hibridização (≈ 50–65 °C)</h4>
+  <p><strong>Resfriamento</strong> das reações para que os <strong>primers</strong> (iniciadores — pequenos pedacinhos de DNA artificial, geralmente com 18-25 nucleotídeos) possam se ligar às sequências complementares na fita de DNA molde.</p>
+  <p>Os primers funcionam como "marcadores" — eles delimitam o início e o fim da região que queremos copiar. Sem primers, a polimerase não tem onde começar.</p>
+
+  <h4>3️⃣ Extensão ou Elongação (≈ 72 °C)</h4>
+  <p><strong>Aquecimento</strong> para que a <strong>Taq polimerase</strong> possa estender os primers, sintetizando novas fitas de DNA. A Taq é uma DNA polimerase que vai adicionando os nucleotídeos complementares (A pareia com T; G pareia com C) na direção 5' → 3'.</p>
+
+  <div class="destaque">
+    <strong>Por que Taq polimerase?</strong> "Taq" vem de <em>Thermus aquaticus</em>, uma bactéria que vive em fontes termais (águas quase fervendo). Sua DNA polimerase é <strong>termoestável</strong>, ou seja, não desnatura nas altas temperaturas da PCR. Se usássemos uma polimerase humana comum, ela seria destruída logo no primeiro ciclo de 95 °C!
+  </div>
+
+  <h3>Por que se chama "reação em cadeia"?</h3>
+  <p>Porque cada ciclo (desnaturação → anelamento → extensão) <strong>dobra</strong> a quantidade de DNA. Em 30 ciclos, você tem 2³⁰ ≈ 1 bilhão de cópias!</p>
+
+  <div class="esquema">
+Crescimento exponencial do DNA na PCR:
+
+Ciclo 0:  ▓                              (1 cópia)
+Ciclo 1:  ▓▓                             (2 cópias)
+Ciclo 2:  ▓▓▓▓                           (4 cópias)
+Ciclo 3:  ▓▓▓▓▓▓▓▓                       (8 cópias)
+Ciclo 10: ▓▓▓▓▓▓▓▓▓▓▓...                 (~1.024 cópias)
+Ciclo 30: 2³⁰ ≈ 1.073.741.824 cópias    (~1 BILHÃO!)
+  </div>
+
+  <h3>Para que serve a PCR? (aplicações)</h3>
+  <ul>
+    <li>Diagnóstico de doenças virais (HIV, COVID-19, dengue, hepatites)</li>
+    <li>Teste de paternidade e identificação de criminosos (DNA fingerprint)</li>
+    <li>Detecção de bactérias e fungos em amostras clínicas</li>
+    <li>Pesquisa científica (clonagem de genes)</li>
+    <li>Identificação de espécies (em paleontologia, conservação)</li>
+  </ul>
+
+  <div class="pegadinha">
+    Muita gente confunde <strong>amplificação</strong> com <strong>aumento de tamanho</strong>. Não é isso! "Amplificar" na PCR = fazer muitas cópias da MESMA sequência. O DNA não fica maior; fica em maior quantidade.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Saber as 3 etapas em ordem: <strong>Desnaturação → Anelamento → Extensão</strong>.</li>
+      <li>Saber a função de cada etapa e a temperatura aproximada.</li>
+      <li>Por que a Taq polimerase é especial (resistência ao calor).</li>
+      <li>O que são <strong>primers</strong> e por que eles são necessários.</li>
+      <li>A natureza <strong>exponencial</strong> da amplificação (2ⁿ).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 4: RT-PCR ============ -->
+<section class="topico" id="sec4">
+  <h2><span class="num">4</span>RT-PCR (Transcriptase Reversa + PCR) — A Estrela da Covid</h2>
+
+  <p>RT-PCR significa <strong>Reverse Transcription PCR</strong>, ou PCR com transcrição reversa. É a técnica usada para <strong>detectar vírus de RNA</strong>, como o SARS-CoV-2 (Covid-19), o HIV, o vírus da dengue, da febre amarela, da influenza e da hepatite C.</p>
+
+  <h3>Como funciona — passo a passo (direto do slide)</h3>
+
+  <h4>Passo 1: Coleta da amostra</h4>
+  <p>É inicialmente colhida a amostra do paciente, por meio de um <strong>swab nasal e nasofaríngeo</strong> (aquela "haste com algodão" que entra no nariz/garganta). Tendo o material do paciente, todas as amostras microbiológicas são extraídas para análise.</p>
+
+  <h4>Passo 2: O problema do RNA</h4>
+  <p>A PCR convencional <strong>só amplifica DNA</strong>. Ela não consegue trabalhar com RNA. Mas o coronavírus tem genoma de RNA! Como resolver?</p>
+
+  <h4>Passo 3: A enzima transcriptase reversa</h4>
+  <p>É necessária a atuação da enzima <strong>transcriptase reversa</strong>, que <strong>converte o RNA molde em uma molécula complementar de DNA (cDNA)</strong>.</p>
+
+  <div class="destaque">
+    <strong>Por que é "reversa"?</strong> O dogma central da biologia diz: DNA → RNA → Proteína. Essa enzima faz o caminho <em>inverso</em>: <strong>RNA → DNA</strong>. Por isso "transcriptase reversa". Ela foi descoberta em retrovírus (como o HIV), que usam essa enzima para integrar seu genoma no DNA da célula hospedeira.
+  </div>
+
+  <div class="esquema">
+Fluxo da RT-PCR:
+
+[Amostra com RNA viral]
+       │
+       ▼
+[Transcriptase Reversa]
+       │
+       │  RNA → DNA complementar (cDNA)
+       ▼
+[cDNA — agora é DNA!]
+       │
+       ▼
+[PCR convencional: 3 etapas em ciclos]
+       │
+       ▼
+[Bilhões de cópias do gene viral]
+       │
+       ▼
+[Detecção: o vírus está presente?]
+  </div>
+
+  <h4>Passo 4: Amplificação e detecção</h4>
+  <p>Esse passo é essencial, pois permite que o material genético originalmente em RNA seja posteriormente <strong>amplificado pela DNA polimerase</strong> durante as etapas da PCR, possibilitando sua identificação e análise. Se houver amplificação significativa de uma sequência específica do vírus, o resultado é <strong>positivo</strong>.</p>
+
+  <h3>Por que a RT-PCR é o "padrão-ouro" para diagnóstico de Covid?</h3>
+  <ul>
+    <li><strong>Alta sensibilidade:</strong> detecta poucas cópias do vírus.</li>
+    <li><strong>Alta especificidade:</strong> só dá positivo se a sequência for mesmo do SARS-CoV-2.</li>
+    <li>Permite detectar o vírus mesmo em pessoas <strong>assintomáticas</strong>.</li>
+  </ul>
+
+  <div class="pegadinha">
+    Cuidado para não confundir <strong>RT-PCR</strong> (PCR com transcriptase reversa, para vírus de RNA) com <strong>qPCR</strong> ou <strong>Real-Time PCR</strong> (PCR quantitativa, que mede a quantidade em tempo real). Muitos laboratórios fazem as duas combinadas: <strong>qRT-PCR</strong>.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Qual é a função da <strong>transcriptase reversa</strong> na RT-PCR.</li>
+      <li>Por que vírus de RNA precisam dessa etapa extra.</li>
+      <li>Aplicação no diagnóstico da Covid-19.</li>
+      <li>O que é cDNA (DNA complementar) e por que é essencial.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 5: DNA FINGERPRINT ============ -->
+<section class="topico" id="sec5">
+  <h2><span class="num">5</span>DNA Fingerprint (Impressão Digital Genética)</h2>
+
+  <p>O <strong>DNA fingerprint</strong> (literalmente "impressão digital de DNA") é uma técnica que cria um "padrão de bandas" único para cada indivíduo, baseando-se nas regiões variáveis do genoma. É a base científica do <strong>teste de paternidade</strong>, da <strong>identificação criminal</strong> e até de estudos populacionais e evolutivos.</p>
+
+  <h3>O conceito-chave: VNTRs</h3>
+  <div class="definicao">
+    <strong>VNTRs (Variable Number of Tandem Repeats — número variável de repetições em sequência):</strong> regiões do DNA <strong>não codificante</strong> formadas por sequências curtas repetidas em série. Em humanos, o número de nucleotídeos de cada unidade de repetição varia de <strong>5 a 100</strong>, e o número de repetições muda de pessoa para pessoa.
+  </div>
+
+  <p>Vamos visualizar:</p>
+  <div class="esquema">
+Imagine uma sequência repetida "GATC":
+
+Pessoa A:  ...GATC GATC GATC GATC...                    (4 repetições)
+Pessoa B:  ...GATC GATC GATC GATC GATC GATC GATC...     (7 repetições)
+Pessoa C:  ...GATC GATC...                              (2 repetições)
+
+→ Cada pessoa tem um número DIFERENTE de repetições nesse "loci".
+→ Combinando vários loci de VNTR, o padrão geral fica praticamente único.
+  </div>
+
+  <p>Características importantíssimas das VNTRs (do slide):</p>
+  <ul>
+    <li>Estão em <strong>DNA não codificante</strong> (não codificam proteínas; são regiões "neutras" para a evolução).</li>
+    <li>São formadas por repetições de unidades compostas de poucos nucleotídeos.</li>
+    <li>Cada indivíduo tem um <strong>padrão específico</strong> de repetições.</li>
+    <li>Esse padrão é <strong>herdado dos pais, segundo os princípios mendelianos</strong> (metade do pai, metade da mãe).</li>
+  </ul>
+
+  <div class="complemento">
+    Hoje em dia, os laboratórios forenses usam mais os <strong>STRs (Short Tandem Repeats)</strong>, que são VNTRs com unidades muito curtas (geralmente 2 a 6 nucleotídeos). Eles são analisados por PCR, o que torna o teste muito mais rápido. Mas o conceito é o mesmo: contar quantas vezes uma sequência se repete.
+  </div>
+
+  <h3>Como o DNA fingerprint é feito (passo a passo, do slide)</h3>
+
+  <h4>1) Obter as células e isolar o DNA nuclear</h4>
+  <p>Com amostras de <strong>células nucleadas</strong> de um indivíduo (sangue, saliva, raiz de cabelo, sêmen, células bucais, qualquer tecido com núcleo — exceto hemácias humanas, que não têm núcleo!), pode-se isolar o DNA nuclear.</p>
+
+  <h4>2) Cortar com enzimas de restrição</h4>
+  <p>O DNA é cortado utilizando <strong>enzimas de restrição específicas</strong> para obter as regiões VNTRs. Essas enzimas cortam o DNA em sequências reconhecidas, gerando fragmentos de tamanhos diferentes — o tamanho depende de quantas repetições a pessoa tem em cada locus.</p>
+
+  <h4>3) Separar por eletroforese</h4>
+  <p>Ao quebrar o DNA, isolam-se fragmentos de <strong>diferentes tamanhos</strong>, que são separados por uma técnica chamada <strong>eletroforese</strong> (vamos detalhar logo abaixo).</p>
+
+  <h4>4) Marcar e visualizar</h4>
+  <p>Em seguida, os fragmentos são marcados com <strong>marcadores radioativos</strong> que serão impressos em um filme de raios X — ou, em técnicas mais modernas, com fluorescência. O resultado é o famoso "código de barras" do DNA.</p>
+
+  <div class="esquema">
+Padrão de bandas (DNA fingerprint) — exemplo simplificado:
+
+         Pessoa 1   Pessoa 2   Pessoa 3
+         ┌──────┐   ┌──────┐   ┌──────┐
+Topo →   │ ─── │   │      │   │ ─── │   (fragmento longo)
+         │      │   │ ─── │   │      │
+         │ ─── │   │      │   │ ─── │
+         │      │   │ ─── │   │      │
+         │ ─── │   │ ─── │   │      │
+         │      │   │      │   │ ─── │
+Base →   │ ─── │   │ ─── │   │ ─── │   (fragmento curto)
+         └──────┘   └──────┘   └──────┘
+
+→ Cada coluna é o "perfil genético" da pessoa.
+→ Pessoas distintas têm padrões diferentes.
+→ Pais e filhos compartilham bandas (metade veio de cada pai).
+  </div>
+
+  <div class="pegadinha">
+    Atenção: o DNA fingerprint <strong>não sequencia</strong> o DNA inteiro. Ele só compara <strong>tamanhos de fragmentos</strong> em regiões específicas (VNTRs/STRs). Isso é mais barato, mais rápido e suficiente para identificar uma pessoa com altíssima confiança estatística.
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 6: ELETROFORESE ============ -->
+<section class="topico" id="sec6">
+  <h2><span class="num">6</span>Eletroforese</h2>
+
+  <p>A eletroforese é uma técnica usada para separar moléculas (como DNA, RNA ou proteínas) com base no seu <strong>tamanho</strong> e/ou <strong>carga elétrica</strong>. É um passo essencial em quase todas as técnicas de biologia molecular.</p>
+
+  <div class="definicao">
+    <strong>Definição (do slide):</strong> A eletroforese consiste basicamente na passagem de <strong>corrente elétrica</strong> pelas amostras de DNA preparadas e imersas em <strong>gel especial</strong>. Essa separação elétrica resulta na formação de <strong>bandas de DNA</strong>.
+  </div>
+
+  <h3>Como funciona — princípio físico</h3>
+  <p>O DNA tem <strong>carga negativa</strong> (por causa dos grupos fosfato no esqueleto da molécula). Quando colocamos uma corrente elétrica através de um gel (geralmente de <strong>agarose</strong> ou <strong>poliacrilamida</strong>) com as amostras, o DNA <strong>migra do polo negativo (cátodo) para o polo positivo (ânodo)</strong>, porque cargas opostas se atraem.</p>
+
+  <div class="esquema">
+APARATO DE ELETROFORESE:
+
+   ┌─────────────────────────────────────────┐
+   │  ⊖ POLO NEGATIVO (cátodo)              │
+   │  ───────────────────────                │
+   │  ▓▓▓ Poços com amostras de DNA ▓▓▓     │
+   │   ↓     ↓     ↓     ↓     ↓   (DNA com │
+   │  ─── ─── ─── ─── ───       carga ⊖    │
+   │       ↓ migra para cá ↓                 │
+   │  ─── ─── ─── ─── ───   bandas grandes  │
+   │      ─── ─── ─── ─── ─── pararam aqui  │
+   │         ─── ─── ─── ─── ─── bandas     │
+   │              ─── ─── ─── pequenas      │
+   │  ───────────────────────  vão mais longe│
+   │  ⊕ POLO POSITIVO (ânodo)               │
+   └─────────────────────────────────────────┘
+
+A corrente elétrica empurra o DNA (negativo) em direção ao polo positivo.
+  </div>
+
+  <h3>Por que fragmentos pequenos andam mais rápido?</h3>
+  <p>O gel é uma malha tridimensional, como uma "peneira molecular". Imagine uma multidão tentando atravessar uma rede:</p>
+  <ul>
+    <li><strong>Fragmentos grandes (longos)</strong> → têm dificuldade para se enroscar pela malha → andam <strong>devagar</strong> → ficam <strong>mais perto dos poços</strong> (no topo do gel).</li>
+    <li><strong>Fragmentos pequenos (curtos)</strong> → atravessam mais fácil → andam <strong>rápido</strong> → ficam <strong>longe dos poços</strong> (no fundo do gel).</li>
+  </ul>
+
+  <h3>Visualização das bandas</h3>
+  <p>Depois da eletroforese, o gel é tratado com um corante (como o <strong>brometo de etídio</strong> ou alternativas mais seguras) que se intercala no DNA e <strong>fluoresce sob luz UV</strong>. Isso revela as bandas de DNA, que aparecem como faixas brilhantes.</p>
+
+  <div class="vestibular">
+    <ul>
+      <li>O DNA migra do polo <strong>negativo para o positivo</strong> (porque é carregado negativamente).</li>
+      <li>Fragmentos <strong>menores</strong> migram <strong>mais</strong>; fragmentos <strong>maiores</strong> migram <strong>menos</strong>.</li>
+      <li>A separação é por <strong>tamanho</strong>, não por sequência.</li>
+      <li>Eletroforese é técnica auxiliar fundamental no DNA fingerprint, no teste de paternidade, na identificação criminal e em quase tudo da biologia molecular.</li>
+    </ul>
+  </div>
+
+  <div class="pegadinha">
+    Erro clássico: dizer que "o DNA migra para o polo negativo". <strong>Não!</strong> Como o DNA é negativo, ele é <em>repelido</em> pelo polo negativo e <em>atraído</em> pelo polo positivo.
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 7: TESTE DE PATERNIDADE ============ -->
+<section class="topico" id="sec7">
+  <h2><span class="num">7</span>Teste de Paternidade</h2>
+
+  <p>O teste de paternidade é a aplicação mais conhecida do DNA fingerprint. Ele se baseia em uma regra simples mas poderosíssima:</p>
+
+  <div class="definicao">
+    <strong>Princípio (do slide):</strong> Se uma banda de DNA da criança não for encontrada na mãe, tem de estar presente no pai biológico — e vice-versa.
+  </div>
+
+  <h3>Por que essa regra funciona?</h3>
+  <p>Cada pessoa tem dois alelos para cada gene/locus: <strong>um veio do pai e o outro veio da mãe</strong>. Isso vale para as VNTRs também. Então, no padrão de bandas da criança:</p>
+
+  <ul>
+    <li>Algumas bandas baterão com as bandas da mãe (foram herdadas dela).</li>
+    <li>As bandas <strong>restantes</strong>, que não estão na mãe, <strong>obrigatoriamente</strong> precisam estar no pai biológico.</li>
+  </ul>
+
+  <div class="esquema">
+EXEMPLO DE TESTE DE PATERNIDADE:
+
+           Mãe       Filho      Suposto Pai
+           ┌────┐    ┌────┐     ┌────┐
+banda 1    │ ── │    │ ── │     │    │     ← veio da mãe ✓
+banda 2    │ ── │    │    │     │    │     ← banda só na mãe
+banda 3    │    │    │ ── │     │ ── │     ← veio do pai ✓
+banda 4    │ ── │    │ ── │     │ ── │     ← veio da mãe ou do pai
+banda 5    │    │    │ ── │     │ ── │     ← veio do pai ✓
+banda 6    │    │    │    │     │ ── │     ← banda só no pai
+           └────┘    └────┘     └────┘
+
+→ TODAS as bandas do filho que não vieram da mãe estão no suposto pai.
+→ Logo, é altamente provável que ele seja o pai biológico.
+
+CASO CONTRÁRIO: se uma banda do filho NÃO estiver nem na mãe nem no
+suposto pai → ele NÃO é o pai biológico. (Salvo erro de mutação rara.)
+  </div>
+
+  <h3>Por que o resultado é praticamente certo?</h3>
+  <p>Os laboratórios analisam, em média, <strong>13 a 20 loci</strong> diferentes (cada um com várias formas possíveis). A chance de duas pessoas não aparentadas terem o mesmo padrão em todos esses loci é da ordem de <strong>1 em vários trilhões</strong>. Por isso, a probabilidade do teste é tipicamente reportada como <em>"99,9999...%"</em>.</p>
+
+  <div class="pegadinha">
+    O teste de paternidade <strong>nunca</strong> é "100% positivo" no sentido absoluto — é estatístico, com altíssima probabilidade. Mas pode ser <strong>100% negativo</strong>: basta uma banda do filho não estar nem na mãe nem no suposto pai para excluir a paternidade com certeza praticamente absoluta.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Aplicar a regra: <strong>"o que não veio da mãe, veio do pai"</strong>.</li>
+      <li>Saber que cada banda corresponde a um alelo (logo, vem de um dos pais).</li>
+      <li>Interpretar gráficos de gel de eletroforese com bandas comparando mãe, filho e suspeito.</li>
+      <li>Entender que o resultado é estatístico, baseado na herança mendeliana.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 8: CENA DE CRIME ============ -->
+<section class="topico" id="sec8">
+  <h2><span class="num">8</span>Cena de Crime e Identificação Criminal</h2>
+
+  <p>Outra aplicação do DNA fingerprint é a <strong>identificação criminal</strong>. Em uma cena de crime, fios de cabelo, sangue, sêmen, saliva, pele sob unhas — qualquer material biológico — pode ser usado para extrair DNA e comparar com suspeitos.</p>
+
+  <h3>Como se compara?</h3>
+  <p>O laboratório faz o DNA fingerprint:</p>
+  <ol>
+    <li>Da <strong>amostra encontrada na cena</strong>.</li>
+    <li>Dos <strong>suspeitos</strong>.</li>
+  </ol>
+  <p>Se o padrão de bandas do suspeito for <strong>idêntico</strong> ao da amostra da cena, ele é "compatível" com o autor do crime — com altíssima probabilidade.</p>
+
+  <div class="esquema">
+COMPARAÇÃO EM CASO CRIMINAL:
+
+         DNA da     Suspeito  Suspeito  Suspeito
+        cena         #1        #2        #3
+        ┌────┐    ┌────┐    ┌────┐    ┌────┐
+        │ ── │    │    │    │ ── │    │ ── │
+        │    │    │ ── │    │    │    │    │
+        │ ── │    │    │    │ ── │    │ ── │
+        │ ── │    │ ── │    │ ── │    │    │
+        │    │    │ ── │    │    │    │ ── │
+        │ ── │    │    │    │ ── │    │ ── │
+        └────┘    └────┘    └────┘    └────┘
+                  ↓          ↓          ↓
+                 NÃO       BATE!       NÃO
+                bate       (igual!)   bate
+
+→ O suspeito #2 tem padrão IDÊNTICO ao DNA da cena.
+→ Há fortíssima evidência de que ele esteve no local.
+  </div>
+
+  <div class="complemento">
+    No Brasil, a identificação por DNA é regulamentada pela Lei 12.654/2012, que permite a criação de bancos de DNA de criminosos condenados por crimes violentos. Esse banco já ajudou a resolver casos antigos de assassinato e estupro.
+  </div>
+
+  <div class="pegadinha">
+    O DNA encontrado na cena <strong>nem sempre</strong> é do criminoso! Pode ser de uma vítima, de um policial que contaminou a cena, ou de qualquer pessoa que passou pelo local. Por isso, o DNA é uma <em>evidência</em>, não uma <em>prova absoluta</em>. Bons promotores e advogados sempre questionam o contexto da coleta.
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 9: CLONAGEM ============ -->
+<section class="topico" id="sec9">
+  <h2><span class="num">9</span>Clonagem (a Ovelha Dolly)</h2>
+
+  <p>O slide trata especificamente de <strong>clonagem a partir de células diferenciadas</strong> — também chamada de <strong>transferência nuclear de células somáticas</strong>. É a técnica que produziu a famosa <strong>ovelha Dolly</strong> em 1996, no Instituto Roslin (Escócia), por Ian Wilmut e Keith Campbell.</p>
+
+  <div class="definicao">
+    <strong>Clonagem:</strong> processo de produzir um indivíduo geneticamente idêntico a outro, sem reprodução sexuada. Os clones têm o mesmo DNA do organismo doador da célula.
+  </div>
+
+  <h3>Como Dolly foi criada — passo a passo</h3>
+
+  <ol>
+    <li><strong>Ovelha A (doadora do núcleo):</strong> coletam-se células diferenciadas (no caso de Dolly, da glândula mamária).</li>
+    <li><strong>Ovelha B (doadora do óvulo):</strong> retira-se um óvulo e <strong>remove-se o núcleo</strong> (enucleação) → óvulo "vazio" geneticamente.</li>
+    <li><strong>Fusão:</strong> insere-se o núcleo da ovelha A dentro do óvulo enucleado da ovelha B (geralmente por choque elétrico).</li>
+    <li><strong>Desenvolvimento:</strong> esse "óvulo reconstruído" começa a se dividir como um zigoto e forma um embrião.</li>
+    <li><strong>Ovelha C (mãe de aluguel):</strong> o embrião é implantado no útero de uma terceira ovelha que dá à luz o clone.</li>
+  </ol>
+
+  <div class="esquema">
+PROCESSO DA CLONAGEM DE DOLLY:
+
+  Ovelha A             Ovelha B
+(face branca)       (face preta)
+   │                    │
+   ▼                    ▼
+[célula somática]   [óvulo retirado]
+   │                    │
+   │             [REMOÇÃO DO NÚCLEO]
+   │                    │
+   │ extração            ▼
+   │  do núcleo     [óvulo enucleado]
+   ▼                    │
+[núcleo isolado] ────►──┤
+                         │ FUSÃO ELÉTRICA
+                         ▼
+                  [óvulo reconstruído]
+                         │
+                         ▼
+                  [embrião se desenvolve]
+                         │
+                         ▼
+                  [implantação no útero]
+                         │
+                  [Ovelha C – mãe de aluguel]
+                         │
+                         ▼
+                       DOLLY 🐑
+                  (face BRANCA – idêntica à ovelha A,
+                   apesar da mãe biológica ser preta!)
+  </div>
+
+  <div class="destaque">
+    <strong>Por que Dolly nasceu igual à ovelha A?</strong> Porque o DNA nuclear (que define quase tudo) veio da ovelha A. Apesar da mãe que gestou ser de outra raça, o aspecto físico segue a doadora do núcleo. Isso provou que o núcleo de uma célula adulta diferenciada pode ser "reprogramado" para gerar um organismo inteiro!
+  </div>
+
+  <h3>Destino de Dolly (do slide)</h3>
+  <ul>
+    <li>Foi a <strong>única bem sucedida</strong> entre <strong>mais de 400 tentativas</strong>.</li>
+    <li>Apresentou alguns problemas de saúde:
+      <ul>
+        <li>Artrose (envelhecimento precoce das articulações)</li>
+        <li>Problemas pulmonares</li>
+      </ul>
+    </li>
+    <li>Morreu aos <strong>6 anos</strong> de idade (ovelhas geralmente vivem 10-12 anos).</li>
+  </ul>
+
+  <div class="complemento">
+    Por que Dolly envelheceu mais rápido? Uma hipótese é que os <strong>telômeros</strong> (capas protetoras nas pontas dos cromossomos) do núcleo da célula doadora já estavam encurtados — a célula tinha "idade biológica" da ovelha A. Sempre que uma célula se divide, os telômeros encurtam um pouco. Dolly começou a vida com telômeros já curtos. Isso é um tema muito atual e de pesquisa avançada.
+  </div>
+
+  <h3>Tipos de clonagem</h3>
+  <table>
+    <tr><th>Tipo</th><th>Objetivo</th><th>Status</th></tr>
+    <tr><td><strong>Reprodutiva</strong></td><td>Gerar um indivíduo idêntico (como Dolly)</td><td>Realizada em vários animais; <strong>proibida em humanos no Brasil</strong></td></tr>
+    <tr><td><strong>Terapêutica</strong></td><td>Produzir células-tronco para tratar doenças</td><td><strong>Proibida em humanos no Brasil</strong> (Lei 11.105/2005)</td></tr>
+  </table>
+
+  <div class="vestibular">
+    <ul>
+      <li>Identificar as três ovelhas: doadora do núcleo, doadora do óvulo, mãe gestante.</li>
+      <li>O clone tem características da <strong>doadora do núcleo</strong>.</li>
+      <li>Diferença entre clonagem <strong>reprodutiva</strong> e <strong>terapêutica</strong>.</li>
+      <li>Problemas e baixa taxa de sucesso (1 em 400+).</li>
+      <li>Lei 11.105/2005 proíbe ambos os tipos em humanos.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 10: CÉLULAS-TRONCO ============ -->
+<section class="topico" id="sec10">
+  <h2><span class="num">10</span>Células-tronco</h2>
+
+  <p>Células-tronco são células com duas propriedades fundamentais: capacidade de <strong>autorrenovação</strong> (se dividem mantendo a propriedade de tronco) e capacidade de <strong>diferenciação</strong> (originam células especializadas). O slide foca na classificação por <strong>potência</strong> (potencial de diferenciação).</p>
+
+  <h3>Classificação das células-tronco (do slide)</h3>
+
+  <div class="grid-3">
+    <div class="card">
+      <h4>🌟 Totipotentes</h4>
+      <p>Podem se transformar em <strong>qualquer célula</strong>, inclusive as células dos anexos embrionários (placenta, cordão umbilical).</p>
+      <p><strong>Exemplo:</strong> o <strong>zigoto</strong> e as células das primeiras divisões (até a fase de mórula, ~até 8 células).</p>
+    </div>
+    <div class="card">
+      <h4>✨ Pluripotentes</h4>
+      <p>Podem se transformar em <strong>muitas células</strong> dos três folhetos embrionários (ectoderma, mesoderma, endoderma) — mas <strong>não nos anexos</strong>.</p>
+      <p><strong>Exemplo:</strong> <strong>células-tronco embrionárias</strong> (do blastocisto, ~5-7 dias).</p>
+    </div>
+    <div class="card">
+      <h4>🔹 Multipotentes</h4>
+      <p>Só podem se diferenciar em <strong>células de um determinado tecido</strong>.</p>
+      <p><strong>Exemplo:</strong> células-tronco hematopoiéticas (medula óssea), que originam só células do sangue. Células-tronco mesenquimais. Células-tronco adultas em geral.</p>
+    </div>
+  </div>
+
+  <div class="esquema">
+HIERARQUIA DAS CÉLULAS-TRONCO:
+
+         ZIGOTO  (totipotente)
+            │
+            ▼  primeiras divisões
+       MÓRULA   (totipotente)
+            │
+            ▼
+      BLASTOCISTO  (massa celular interna = pluripotente)
+            │
+            ▼
+       Embrião — 3 folhetos
+       │      │      │
+   Ectoderma Mesoderma Endoderma
+       │      │      │
+       ▼      ▼      ▼
+    Tecidos especializados
+       │      │      │
+       ▼      ▼      ▼
+  Células-tronco TECIDUAIS  (multipotentes)
+       │
+       ▼
+   células totalmente diferenciadas (sem capacidade de tronco)
+  </div>
+
+  <div class="complemento">
+    Existem ainda categorias mais avançadas que podem aparecer em vestibulares de elite: <strong>oligopotentes</strong> (formam poucos tipos celulares, como células-tronco mieloides) e <strong>unipotentes</strong> (formam apenas um tipo, como células-tronco da pele que só geram queratinócitos). O zigoto também é classificado às vezes como <strong>onipotente</strong>.
+  </div>
+
+  <h3>Por que células-tronco embrionárias são tão importantes para a pesquisa?</h3>
+  <p>Como elas são <strong>pluripotentes</strong>, podem virar quase qualquer célula do corpo. Isso permite, em tese, regenerar tecidos lesionados, tratar doenças degenerativas (Parkinson, Alzheimer, diabetes tipo 1), reconstituir órgãos. Mas há controvérsias éticas, porque obter essas células geralmente envolve a destruição de um embrião.</p>
+
+  <div class="vestibular">
+    <ul>
+      <li><strong>Decorar</strong> os exemplos: zigoto = totipotente; embrionária do blastocisto = pluripotente; adulta de tecido específico = multipotente.</li>
+      <li>A diferença entre os três tipos.</li>
+      <li>Aplicações terapêuticas e questões éticas associadas.</li>
+    </ul>
+  </div>
+
+  <div class="pegadinha">
+    Não confundir <strong>totipotente</strong> com <strong>pluripotente</strong>! Totipotente = forma TUDO (inclusive placenta e anexos). Pluripotente = forma MUITAS coisas, mas não anexos. Vestibular adora trocar essas palavras na questão.
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 11: LEI DE BIOSSEGURANÇA ============ -->
+<section class="topico" id="sec11">
+  <h2><span class="num">11</span>Lei de Biossegurança (Lei 11.105/2005)</h2>
+
+  <p>A Lei de Biossegurança brasileira (Lei nº 11.105, de 24 de março de 2005) é o marco regulatório da pesquisa com células-tronco embrionárias e organismos geneticamente modificados (OGMs) no Brasil.</p>
+
+  <h3>O que diz a lei sobre células-tronco embrionárias (do slide)</h3>
+  <div class="definicao">
+    A lei prevê que os embriões liberados para a pesquisa são aqueles que:
+    <ul>
+      <li>Estejam <strong>congelados há pelo menos 3 anos</strong>;</li>
+      <li>Tenham até <strong>14 dias</strong> de desenvolvimento (fase conhecida como <strong>blastocisto</strong>) — quando ainda <strong>não há resquício de sistema nervoso</strong> no embrião.</li>
+    </ul>
+  </div>
+
+  <p>Por que esses critérios?</p>
+  <ul>
+    <li><strong>3 anos congelados:</strong> embriões "esquecidos" em clínicas de fertilização in vitro, sem perspectiva de implantação. Em vez de descartá-los, podem ser usados para pesquisa.</li>
+    <li><strong>14 dias / blastocisto:</strong> esse é o limite ético internacional. Antes disso, ainda não houve formação da "linha primitiva" (que dá origem ao sistema nervoso). Alguns pesquisadores entendem que, <strong>se a morte deve ser encarada como morte cerebral, o início da vida também deveria ser assim considerado</strong> — ou seja, a "vida individual" começaria com a formação do sistema nervoso.</li>
+  </ul>
+
+  <h3>Outros pontos importantes da Lei 11.105/2005 (slide 41)</h3>
+  <ul>
+    <li>✅ <strong>Permissão</strong> para fins de pesquisa e terapia da utilização de células-tronco embrionárias obtidas de embriões produzidos pela <strong>FIV (fertilização in vitro)</strong>.</li>
+    <li>✅ <strong>Liberação</strong> da produção e comercialização dos <strong>OGM (Organismos Geneticamente Modificados)</strong>, os transgênicos.</li>
+    <li>❌ <strong>Proibição da clonagem humana</strong>, seja a <strong>reprodutiva</strong> (gerar um bebê clone) ou a <strong>terapêutica</strong> (gerar embriões para extrair células-tronco).</li>
+  </ul>
+
+  <div class="vestibular">
+    <ul>
+      <li>3 anos congelados + 14 dias de embrião + FIV → critérios para liberar células-tronco para pesquisa.</li>
+      <li>A lei <strong>libera</strong> transgênicos.</li>
+      <li>A lei <strong>proíbe</strong> clonagem humana (todas as formas).</li>
+      <li>Discussão ética: quando começa a vida humana?</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 12: iPSC ============ -->
+<section class="topico" id="sec12">
+  <h2><span class="num">12</span>Desdiferenciação e iPSC</h2>
+
+  <p>Diante das polêmicas éticas em obter células-tronco a partir de embriões, surgiu uma alternativa revolucionária: a <strong>desdiferenciação</strong> de células adultas para "voltarem" a ser células-tronco pluripotentes.</p>
+
+  <div class="definicao">
+    <strong>iPSC (induced Pluripotent Stem Cells — células-tronco de pluripotência induzida):</strong> células adultas (por exemplo, da pele) que são "reprogramadas" em laboratório e se tornam pluripotentes — comportando-se como células-tronco embrionárias.
+  </div>
+
+  <p>O slide afirma:</p>
+  <ul>
+    <li>Outra linha de pesquisa para obter células-tronco: <strong>desdiferenciar células adultas</strong>.</li>
+    <li><strong>Vantagem:</strong> não existem problemas éticos (porque <strong>não envolve destruição de embriões</strong>).</li>
+  </ul>
+
+  <h3>Quem fez essa descoberta?</h3>
+  <p><strong>Shinya Yamanaka</strong>, em 2006, no Japão, mostrou que apenas <strong>4 genes</strong> (chamados Fatores de Yamanaka: Oct4, Sox2, Klf4 e c-Myc) eram suficientes para reprogramar uma célula adulta em pluripotente. Ganhou o Nobel de Medicina em 2012.</p>
+
+  <div class="esquema">
+PRINCÍPIO DAS iPSC:
+
+[Célula da pele do paciente]   ← célula totalmente diferenciada
+        │
+        ▼  (introduzir os 4 fatores de Yamanaka)
+[Célula desdiferenciada]
+        │
+        ▼
+[iPSC – pluripotente]   ← agora pode virar QUALQUER tipo celular
+        │
+        ▼
+[Diferenciação em laboratório]
+        │
+        ├──► neurônio
+        ├──► célula cardíaca
+        ├──► célula hepática
+        └──► etc.
+  </div>
+
+  <h3>Vantagens das iPSC</h3>
+  <ol>
+    <li><strong>Sem problemas éticos:</strong> não destrói embriões.</li>
+    <li><strong>Compatibilidade imunológica:</strong> as iPSC são feitas a partir de células do <strong>próprio paciente</strong>, então não há rejeição (o tecido produzido é "self").</li>
+    <li><strong>Modelagem de doenças:</strong> permitem estudar doenças genéticas em laboratório, criando "mini-órgãos" (organoides) com a genética do paciente.</li>
+  </ol>
+
+  <div class="complemento">
+    Há também as <strong>células-tronco adultas</strong> (presentes em tecidos como medula óssea, sangue do cordão umbilical, polpa dentária). Essas são naturalmente <strong>multipotentes</strong>. Já são usadas há décadas em transplantes de medula para tratar leucemias, por exemplo. As iPSC são diferentes: são <strong>induzidas</strong> a virarem pluripotentes em laboratório.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>iPSC = células adultas reprogramadas a virarem <strong>pluripotentes</strong>.</li>
+      <li>Vantagem ética: não destrói embriões.</li>
+      <li>Vantagem médica: compatibilidade com o próprio paciente (sem rejeição).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 13: DNA RECOMBINANTE ============ -->
+<section class="topico" id="sec13">
+  <h2><span class="num">13</span>DNA Recombinante e Vetores</h2>
+
+  <p>A <strong>tecnologia do DNA recombinante</strong> é a base da engenharia genética. Permite "juntar" pedaços de DNA de organismos diferentes em uma única molécula. É assim que produzimos insulina, hormônio de crescimento, interferon e muitos outros medicamentos modernos.</p>
+
+  <div class="definicao">
+    <strong>DNA recombinante (do slide):</strong> O DNA do organismo de interesse é combinado com um fragmento de DNA maior que serve como um veículo, chamado de <strong>vetor</strong>.
+  </div>
+
+  <h3>Os principais vetores (do slide)</h3>
+  <table>
+    <tr><th>Vetor</th><th>O que é</th><th>Capacidade</th></tr>
+    <tr><td><strong>Plasmídeos</strong></td><td>Pequenas moléculas circulares de DNA que existem naturalmente em bactérias, separadas do cromossomo principal. As bactérias as trocam entre si.</td><td>Pequena (até ~10 kb)</td></tr>
+    <tr><td><strong>Bacteriófagos</strong></td><td>Vírus que infectam bactérias. Seu DNA viral é "esvaziado" e usado como vetor.</td><td>Média (até ~25 kb)</td></tr>
+    <tr><td><strong>Cosmídeos</strong></td><td>Híbrido entre plasmídeo e bacteriófago — combina vantagens dos dois.</td><td>Grande (até ~45 kb)</td></tr>
+  </table>
+
+  <h3>Como o DNA recombinante é montado — visão geral</h3>
+  <div class="esquema">
+PRODUÇÃO DE DNA RECOMBINANTE — exemplo: gene da insulina
+
+  [Célula humana]            [Bactéria]
+       │                          │
+   isolar gene              isolar plasmídeo
+   da insulina                    │
+       │                          │
+       ▼                          ▼
+  ─── gene ───              ⭕ plasmídeo
+       │                          │
+       │                          │
+   ◄ CORTE com mesma enzima de restrição ►
+       │                          │
+       ▼                          ▼
+  ─── gene ─── (com extremidades)  ⭕ aberto (com extremidades)
+                                   │
+       └─────► UNIÃO via DNA LIGASE ◄──────┘
+                          │
+                          ▼
+              ⭕ plasmídeo recombinante
+                  (gene da insulina inserido)
+                          │
+                          ▼
+              [insere na bactéria]
+                          │
+                          ▼
+        Bactéria PRODUZ INSULINA HUMANA!
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>3 tipos principais de vetores: <strong>plasmídeos, bacteriófagos, cosmídeos</strong>.</li>
+      <li>Saber que vetor = "veículo" que carrega o gene de interesse para outro organismo.</li>
+      <li>Plasmídeos são naturais de bactérias.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 14: ENZIMAS DE RESTRIÇÃO ============ -->
+<section class="topico" id="sec14">
+  <h2><span class="num">14</span>Enzimas de Restrição (Endonucleases)</h2>
+
+  <p>Sem as enzimas de restrição, não haveria engenharia genética. Elas são as "tesouras moleculares" que cortam o DNA em pontos específicos.</p>
+
+  <div class="definicao">
+    <strong>Enzimas de restrição:</strong> enzimas obtidas a partir de bactérias, que reconhecem uma <strong>sequência específica</strong> e realizam a <strong>clivagem (corte)</strong> da fita de DNA. São também chamadas de <strong>endonucleases</strong> de restrição (porque cortam <em>dentro</em> da molécula de DNA, não nas pontas).
+  </div>
+
+  <h3>Por que as bactérias têm essas enzimas?</h3>
+  <p>O slide responde claramente:</p>
+  <ul>
+    <li><strong>Endonucleases podem defender as bactérias de ataques virais</strong>.</li>
+  </ul>
+  <p>Quando um vírus (bacteriófago) injeta seu DNA na bactéria, as enzimas de restrição cortam esse DNA estrangeiro em pedaços, inativando o vírus. É uma espécie de "sistema imune molecular" das bactérias. Para evitar cortar o próprio DNA, a bactéria <strong>metila</strong> suas sequências (adiciona grupos químicos que escondem o sítio de corte das enzimas).</p>
+
+  <h3>O exemplo clássico do slide: EcoRI</h3>
+  <p>EcoRI é a enzima de restrição da bactéria <strong>Escherichia coli</strong> (cepa R, primeira identificada — daí "RI"). Ela reconhece e corta a sequência:</p>
+
+  <div class="esquema">
+SEQUÊNCIA RECONHECIDA PELA EcoRI:
+
+  5' ─ G  A  A  T  T  C ─ 3'
+        ↑              ↑
+       Corte aqui!  E aqui!
+       (entre G e A em ambas as fitas)
+  3' ─ C  T  T  A  A  G ─ 5'
+
+→ Esta enzima sempre corta o DNA nas duas hélices entre G e A.
+
+RESULTADO DO CORTE:
+
+  5' ─ G                    A A T T C ─ 3'
+                                            +
+  3' ─ C T T A A                    G ─ 5'
+       ↑                            ↑
+   "extremidade coesiva"        "extremidade coesiva"
+       (sticky ends)
+  </div>
+
+  <h3>O que são palíndromos no DNA?</h3>
+  <p>O slide diz: <strong>"Em geral as enzimas leem palíndromos"</strong>. Isso é fundamental!</p>
+
+  <div class="definicao">
+    <strong>Palíndromo no DNA:</strong> sequência que se lê igual nos dois sentidos quando consideramos as duas fitas, lendo cada uma de 5' para 3'.
+  </div>
+
+  <p>Veja o exemplo:</p>
+  <div class="esquema">
+A sequência da EcoRI é palindrômica:
+
+  5' ─ G A A T T C ─ 3'    (lendo 5'→3')
+  3' ─ C T T A A G ─ 5'    (lendo 5'→3' também! → G A A T T C)
+
+Lendo ambas de 5' para 3', dá a MESMA sequência: GAATTC.
+Por isso é palíndromo — como "ARARA" ou "OSSO" em palavras.
+
+Isso é importante porque a enzima atua em ambas as fitas
+de forma simétrica.
+  </div>
+
+  <h3>Vários tipos de endonucleases (do slide)</h3>
+  <p>Cada bactéria tem suas próprias enzimas, que recebem nome derivado da espécie:</p>
+  <table>
+    <tr><th>Enzima</th><th>Origem (bactéria)</th></tr>
+    <tr><td><strong>AluI</strong></td><td><em>Arthrobacter luteus</em></td></tr>
+    <tr><td><strong>HaeIII</strong></td><td><em>Haemophilus aegyptius</em></td></tr>
+    <tr><td><strong>BamHI</strong></td><td><em>Bacillus amyloliquefaciens</em></td></tr>
+    <tr><td><strong>HindIII</strong></td><td><em>Haemophilus influenzae</em></td></tr>
+    <tr><td><strong>EcoRI</strong></td><td><em>Escherichia coli</em></td></tr>
+  </table>
+
+  <div class="complemento">
+    O nome das enzimas segue uma regra: as 3 letras vêm do nome científico da bactéria (gênero + espécie), e o número romano (I, II, III) indica a ordem de descoberta. Ex.: <strong>Eco</strong>RI = <em>E</em>scherichia <em>co</em>li, primeira (R = cepa específica).
+  </div>
+
+  <h3>Tipos de extremidades geradas no corte</h3>
+  <ul>
+    <li><strong>Extremidades coesivas (sticky ends):</strong> a enzima corta de forma "desencontrada" nas duas fitas, deixando uma ponta de fita simples saindo. Essas pontas conseguem se "grudar" em outras moléculas que tenham a sequência complementar — por isso "coesivas". <em>EcoRI faz extremidades coesivas.</em></li>
+    <li><strong>Extremidades cegas (blunt ends):</strong> a enzima corta no mesmo ponto em ambas as fitas, deixando pontas "rasas". Mais difíceis de unir, mas universais (qualquer extremidade cega pode se ligar a outra). <em>HaeIII e AluI fazem extremidades cegas.</em></li>
+  </ul>
+
+  <div class="vestibular">
+    <ul>
+      <li>Função: <strong>cortar o DNA em sequências específicas</strong> (palíndromos).</li>
+      <li>Origem: <strong>bactérias</strong> (defesa contra vírus).</li>
+      <li>Reconhecer EcoRI e sua sequência GAATTC.</li>
+      <li>Diferença entre extremidades coesivas e cegas.</li>
+      <li>Importância para construir DNA recombinante.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 15: DNA LIGASE ============ -->
+<section class="topico" id="sec15">
+  <h2><span class="num">15</span>DNA Ligase</h2>
+
+  <p>Se a enzima de restrição é a "tesoura", a DNA ligase é a "cola" molecular.</p>
+
+  <div class="definicao">
+    <strong>DNA ligase (do slide):</strong> Enzima que <strong>une os fragmentos de DNA</strong>. Está presente em vários organismos.
+  </div>
+
+  <h3>Como funciona?</h3>
+  <p>A DNA ligase forma uma <strong>ligação fosfodiéster</strong> entre o grupo fosfato de um nucleotídeo e o grupo hidroxila (-OH) do nucleotídeo vizinho, fechando o "rompimento" no esqueleto açúcar-fosfato.</p>
+
+  <div class="esquema">
+ANTES (após corte da enzima de restrição):
+
+5' ─ G                    A A T T C ─ 3'
+                                            
+3' ─ C T T A A                    G ─ 5'
+        |                          |
+    "rompimento"            "rompimento"
+
+DEPOIS (com DNA ligase):
+
+5' ─ G  A  A  T  T  C ─ 3'
+        TODOS UNIDOS
+3' ─ C  T  T  A  A  G ─ 5'
+  </div>
+
+  <h3>Onde a DNA ligase aparece naturalmente?</h3>
+  <ul>
+    <li>Na <strong>replicação do DNA</strong>, unindo os fragmentos de Okazaki na fita descontínua (lagging strand).</li>
+    <li>No <strong>reparo do DNA</strong> quando há quebras na fita.</li>
+    <li>Em <strong>recombinação genética</strong> (crossing over, etc.).</li>
+  </ul>
+
+  <h3>Aplicação na engenharia genética</h3>
+  <p>É a DNA ligase que <strong>fecha</strong> o plasmídeo recombinante. Depois de cortar o vetor e o gene de interesse com a mesma enzima de restrição, as extremidades coesivas se grudam por pareamento de bases — mas é a ligase que <strong>solda</strong> definitivamente.</p>
+
+  <div class="vestibular">
+    <ul>
+      <li>Função: <strong>unir/colar</strong> fragmentos de DNA.</li>
+      <li>Forma <strong>ligações fosfodiéster</strong>.</li>
+      <li>Trabalha em conjunto com as enzimas de restrição na construção de DNA recombinante.</li>
+      <li>Também atua naturalmente na replicação e no reparo do DNA.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 16: CLONAGEM DE DNA + INSULINA ============ -->
+<section class="topico" id="sec16">
+  <h2><span class="num">16</span>Clonagem de DNA e Produção de Insulina</h2>
+
+  <h3>Clonagem de DNA</h3>
+  <div class="definicao">
+    <strong>Clonagem de DNA (do slide):</strong> Produzir cópias idênticas de um mesmo fragmento da molécula de DNA.
+  </div>
+
+  <p>Atenção: clonagem de DNA <strong>não é</strong> a mesma coisa que clonagem de organismo (Dolly). Aqui estamos falando de copiar uma sequência específica de DNA, geralmente inserindo-a em uma bactéria que vai se multiplicar e produzir milhões de cópias do gene (e da proteína que ele codifica).</p>
+
+  <h3>Caso clássico: produção de Insulina (do slide)</h3>
+  <p>O slide explica:</p>
+  <p>"A insulina produzida por engenharia genética é <strong>idêntica à sintetizada pelo pâncreas humano</strong>, eliminando o risco de qualquer reação alérgica pelo diabético. Anteriormente, a reação alérgica era mais frequente porque a insulina era extraída do pâncreas de <strong>ratos criados em laboratório ou de bois e porcos</strong> obtidos em matadouros."</p>
+
+  <h3>Como produzir insulina humana em bactéria — etapas</h3>
+  <ol>
+    <li><strong>Identificar o gene da insulina</strong> no genoma humano.</li>
+    <li><strong>Cortar o gene</strong> com enzima de restrição.</li>
+    <li><strong>Cortar o plasmídeo bacteriano</strong> com a mesma enzima (para que as extremidades sejam compatíveis).</li>
+    <li><strong>Unir gene + plasmídeo</strong> usando DNA ligase → plasmídeo recombinante.</li>
+    <li><strong>Inserir o plasmídeo recombinante na bactéria</strong> (geralmente <em>E. coli</em>) por choque elétrico ou tratamento químico.</li>
+    <li>A bactéria reconhece o gene como seu e <strong>produz insulina humana</strong>.</li>
+    <li>As bactérias se reproduzem em grandes biorreatores → produção em massa.</li>
+    <li>A insulina é <strong>extraída e purificada</strong>.</li>
+  </ol>
+
+  <div class="esquema">
+PRODUÇÃO INDUSTRIAL DE INSULINA:
+
+[Gene humano da insulina]
+       │
+       ▼ enzima de restrição
+[fragmento livre]
+       │
+       │       [plasmídeo bacteriano]
+       │              │
+       │              ▼ MESMA enzima de restrição
+       │       [plasmídeo aberto]
+       │              │
+       └──── DNA ligase ──► [plasmídeo recombinante]
+                                    │
+                                    ▼
+                             [introduz na E. coli]
+                                    │
+                                    ▼
+                       BACTÉRIAS PRODUZINDO INSULINA
+                                    │
+                                    ▼
+                       BIORREATOR (multiplicação)
+                                    │
+                                    ▼
+                       PURIFICAÇÃO DA INSULINA
+                                    │
+                                    ▼
+                       USO MÉDICO (sem rejeição!)
+  </div>
+
+  <div class="destaque">
+    <strong>Por que insulina humana de bactéria não causa alergia?</strong> Porque é <strong>quimicamente idêntica</strong> à insulina que o próprio paciente produziria. As insulinas antigas, vindas de boi ou porco, tinham pequenas diferenças na sequência de aminoácidos, e o sistema imune do paciente podia reconhecê-las como "estranhas" e gerar reação alérgica.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Insulina humana recombinante: <strong>idêntica</strong> à humana → <strong>sem alergia</strong>.</li>
+      <li>Insulina antiga: extraída de boi/porco → podia causar reação imune.</li>
+      <li>É um exemplo PRÁTICO da tecnologia do DNA recombinante.</li>
+      <li>A bactéria que recebeu o gene humano é considerada <strong>transgênica</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 17: ENGENHARIA GENÉTICA + TRANSGÊNICOS ============ -->
+<section class="topico" id="sec17">
+  <h2><span class="num">17</span>Engenharia Genética e Conceito de Transgênico</h2>
+
+  <h3>Engenharia Genética (do slide)</h3>
+  <ul>
+    <li>A transferência de <strong>genes entre espécies distintas</strong> só foi possível graças à <strong>Tecnologia do DNA recombinante</strong>.</li>
+    <li>Para essa técnica são utilizadas algumas ferramentas importantes obtidas a partir de microrganismos (enzimas de restrição, DNA ligase, plasmídeos…).</li>
+    <li>As primeiras manipulações se deram na <strong>década de 1970</strong>.</li>
+  </ul>
+
+  <h3>Conceito de Transgênico — atenção máxima!</h3>
+  <div class="definicao">
+    <strong>Transgênico (do slide):</strong> Qualquer organismo que receba <strong>por manipulação genética, gene de OUTRA espécie</strong>.
+  </div>
+
+  <p>O slide dá dois exemplos cruciais para diferenciar:</p>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>✅ É transgênico</h4>
+      <p>Uma <strong>bactéria</strong> que recebeu um <strong>gene humano</strong> para a produção de insulina <strong>É transgênica</strong>.</p>
+      <p>Por quê? Porque recebeu gene de espécie <em>diferente</em> (humano).</p>
+    </div>
+    <div class="card">
+      <h4>❌ NÃO é transgênico</h4>
+      <p>Um <strong>humano hemofílico</strong> que recebeu o <strong>gene humano</strong> para coagulação normal <strong>NÃO É transgênico</strong>.</p>
+      <p>Por quê? Porque o gene introduzido é da <strong>mesma espécie</strong> (humano em humano). Esse caso é chamado de <strong>terapia gênica</strong>.</p>
+    </div>
+  </div>
+
+  <div class="alerta">
+    <strong>⚠️ ATENÇÃO MÁXIMA — pega muita gente!</strong> Para ser transgênico, precisa receber gene de <strong>outra espécie</strong>. Receber gene da <strong>mesma espécie</strong> (mesmo que de outro indivíduo) NÃO faz o organismo ser transgênico — isso é <strong>terapia gênica</strong>. Vestibular adora cobrar essa diferença!
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Definição precisa de transgênico: gene de <strong>outra espécie</strong>.</li>
+      <li>Diferença entre <strong>transgenia</strong> (gene de outra espécie) e <strong>terapia gênica</strong> (gene da mesma espécie).</li>
+      <li>Exemplo da bactéria com gene humano: bactéria fica transgênica.</li>
+      <li>Exemplo do hemofílico tratado com gene humano: NÃO é transgênico.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 18: PLANTAS TRANSGÊNICAS ============ -->
+<section class="topico" id="sec18">
+  <h2><span class="num">18</span>Plantas Transgênicas (Soja RR, Bt)</h2>
+
+  <p>O slide cita três plantas transgênicas mais famosas:</p>
+  <ul>
+    <li><strong>Soja RR (Roundup Ready)</strong></li>
+    <li><strong>Milho Bt</strong></li>
+    <li><strong>Algodão Bt</strong></li>
+  </ul>
+
+  <h3>O que é o "Bt"?</h3>
+  <div class="definicao">
+    A bactéria <strong><em>Bacillus thuringiensis</em></strong> produz proteínas (<strong>Cry / Vip</strong>) tóxicas para insetos-praga específicos, como lagartas, <strong>sem afetar humanos ou outros animais</strong>. Os genes produtores dessas proteínas são isolados e introduzidos em plantas, através de diferentes vetores.
+  </div>
+
+  <p>Logo:</p>
+  <ul>
+    <li><strong>Milho Bt</strong> = milho que recebeu o gene da proteína Cry do <em>Bacillus thuringiensis</em>. A planta passa a produzir a toxina nas suas folhas. Quando uma lagarta come, a toxina destrói o intestino do inseto e ele morre.</li>
+    <li><strong>Algodão Bt</strong> = mesma lógica, aplicada ao algodão (combate o bicudo, lagartas).</li>
+  </ul>
+
+  <h3>O que é "RR" (Roundup Ready)?</h3>
+  <p><strong>Complemento para melhor compreensão:</strong> RR é uma marca registrada da Monsanto. <strong>Soja RR</strong> é uma soja modificada para ser <strong>resistente ao herbicida glifosato</strong> (vendido com o nome comercial "Roundup"). O agricultor pode pulverizar o herbicida na lavoura, e ele mata as ervas daninhas — mas <strong>não mata a soja</strong>, porque ela tem o gene de resistência (originalmente vindo de uma bactéria do solo, <em>Agrobacterium</em>).</p>
+
+  <div class="esquema">
+COMO FUNCIONA O MILHO Bt:
+
+  Bacillus thuringiensis (bactéria)
+            │
+   gene da proteína Cry
+            │
+            ▼ enzima de restrição + ligase
+            │
+   [introdução em plantas via Agrobacterium ou biolística]
+            │
+            ▼
+   Milho com gene Cry incorporado (transgênico!)
+            │
+            ▼
+   Milho produz proteína Cry nas folhas
+            │
+            ▼
+   Lagarta come o milho ──► Cry destrói o intestino da lagarta
+            │
+            ▼
+        Lagarta morre 🐛💀
+   (Humanos e outros animais não têm os receptores
+    que essa toxina ataca, então não são afetados)
+  </div>
+
+  <p>A toxina Bt é específica para certos grupos de insetos porque ela só atua em receptores presentes no intestino de lagartas (lepidópteros). Mamíferos não têm esses receptores.</p>
+
+  <div class="complemento">
+    Como o gene de uma bactéria é introduzido em uma planta? Os métodos mais comuns são:
+    <ul>
+      <li><strong><em>Agrobacterium tumefaciens</em>:</strong> bactéria que naturalmente insere DNA em plantas (causa o "tumor da galha do colo"). Cientistas "domesticam" essa bactéria para inserir o gene desejado.</li>
+      <li><strong>Biolística (canhão de genes):</strong> partículas microscópicas de ouro ou tungstênio cobertas com o DNA são "atiradas" nas células vegetais sob alta pressão.</li>
+      <li><strong>Eletroporação:</strong> um choque elétrico abre poros temporários na membrana da célula, permitindo que o DNA entre.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 19: FIV E ANIMAIS TRANSGÊNICOS ============ -->
+<section class="topico" id="sec19">
+  <h2><span class="num">19</span>FIV (Fertilização in vitro) e Animais Transgênicos</h2>
+
+  <h3>FIV — Fertilização in vitro</h3>
+  <p>FIV é uma técnica de reprodução assistida em que a fecundação ocorre <strong>fora do corpo</strong> (em uma placa de laboratório, em vidro — daí "in vitro"). Posteriormente, o embrião é implantado no útero da mulher.</p>
+
+  <p>Etapas básicas:</p>
+  <ol>
+    <li><strong>Estímulo hormonal:</strong> a mulher recebe gonadotrofinas e hCG para amadurecer vários óvulos.</li>
+    <li><strong>Aspiração dos óvulos</strong> (em caso de obstrução tubária ou outras causas).</li>
+    <li><strong>Coleta de espermatozoides.</strong></li>
+    <li><strong>Fecundação na placa de Petri</strong> → formação do pré-embrião.</li>
+    <li><strong>Transferência embrionária</strong> para a cavidade uterina.</li>
+  </ol>
+
+  <p>A FIV é a fonte dos embriões "excedentes" mencionados na Lei de Biossegurança — embriões congelados há 3+ anos podem ser doados para pesquisa.</p>
+
+  <h3>Animais Transgênicos</h3>
+  <div class="definicao">
+    <strong>Animal transgênico:</strong> animal que recebeu, por manipulação genética, gene de outra espécie.
+  </div>
+
+  <h3>Por que criar animais transgênicos? (do slide)</h3>
+  <p>O slide responde:</p>
+  <ul>
+    <li>Para <strong>compreender o efeito de proteínas</strong> e seu local e momento de expressão.</li>
+    <li>Uma <strong>proteína fluorescente</strong> (como a GFP — Green Fluorescent Protein, da água-viva <em>Aequorea victoria</em>) pode ajudar a localizar elementos do <strong>sistema nervoso</strong> ou proteínas que são importantes para o desenvolvimento.</li>
+  </ul>
+
+  <p>Outras aplicações de animais transgênicos:</p>
+  <ul>
+    <li><strong>Pesquisa biomédica:</strong> camundongos transgênicos são modelos para estudar doenças humanas (Alzheimer, câncer, diabetes).</li>
+    <li><strong>Produção de fármacos no leite:</strong> ovelhas e cabras transgênicas que produzem proteínas terapêuticas no leite (ex.: alfa-antitripsina).</li>
+    <li><strong>Xenotransplantes:</strong> porcos transgênicos com órgãos compatíveis com humanos (linha de pesquisa avançada).</li>
+  </ul>
+
+  <div class="complemento">
+    A descoberta da GFP (proteína verde fluorescente) rendeu o Nobel de Química 2008 a Shimomura, Chalfie e Tsien. Hoje é uma das ferramentas mais usadas em biologia: dá para acoplar a GFP a praticamente qualquer proteína e ver, ao microscópio, onde e quando ela aparece dentro da célula. É como uma "lanterna molecular".
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 20: BENEFÍCIOS E RISCOS ============ -->
+<section class="topico" id="sec20">
+  <h2><span class="num">20</span>Benefícios e Riscos dos Transgênicos</h2>
+
+  <h3>Benefícios — divididos em GERAÇÕES (do slide)</h3>
+
+  <h4>1ª geração: facilitam a vida do produtor</h4>
+  <ul>
+    <li>Plantas que <strong>resistem a estresses</strong> diversos (salinidade, seca, temperaturas extremas).</li>
+    <li>Plantas <strong>resistentes a herbicidas</strong> (como a soja RR).</li>
+    <li><strong>Vegetais Bt</strong> (batata, milho, algodão e outras espécies) que possuem o gene do <em>Bacillus thuringiensis</em> para a produção de proteínas Bt que <strong>impedem a herbivoria por parte das lagartas</strong>.</li>
+  </ul>
+
+  <h4>2ª geração: benefícios para o consumidor</h4>
+  <ul>
+    <li>Organismos mais <strong>nutritivos</strong> (ex.: arroz dourado / Golden rice®, com mais β-Caroteno — pré-vitamina A — para combater cegueira em crianças desnutridas).</li>
+    <li>Aqueles que podem ser <strong>conservados por mais tempo</strong> (tomate de maturação retardada, por exemplo).</li>
+  </ul>
+
+  <h4>3ª geração: biorreatores</h4>
+  <ul>
+    <li><strong>Biorreatores:</strong> organismos que vivem confinados em laboratório, produzindo substâncias diversas como <strong>fármacos ou vacinas</strong>.</li>
+    <li><strong>Bactérias transgênicas</strong> (insulina, hormônio de crescimento).</li>
+    <li><strong>Animais transgênicos</strong> (proteínas no leite).</li>
+    <li><strong>Vegetais em casas de vegetação</strong> (produção de vacinas comestíveis em estudo).</li>
+  </ul>
+
+  <h4>Outros benefícios (slide 45)</h4>
+  <ul>
+    <li><strong>Biorremediação:</strong> vegetais ou bactérias modificados que despoluem ambientes (retirando metais pesados, degradando poluentes).</li>
+    <li><strong>Conservação de ecossistemas:</strong> aumento de produtividade significa menor pressão para desmatar.</li>
+    <li>População humana tende a crescer; sem aumento de produtividade, mais áreas naturais teriam que ser convertidas em lavoura.</li>
+  </ul>
+
+  <h3>Riscos dos transgênicos (do slide)</h3>
+
+  <h4>Riscos ao meio ambiente</h4>
+  <ul>
+    <li>Uso desenfreado de agrotóxicos (paradoxalmente, em algumas culturas RR, o uso de herbicida aumentou).</li>
+    <li>Insetos resistentes a agrotóxicos / Bt.</li>
+    <li>Pode afetar plantas nativas (transferência de genes por polinização).</li>
+  </ul>
+
+  <h4>Riscos à sociedade</h4>
+  <ul>
+    <li>Inacessível para pequenos agricultores (sementes patenteadas custam mais caro e <strong>não podem ser replantadas</strong> sem pagar royalties).</li>
+    <li>Concentração do mercado de sementes em poucas multinacionais.</li>
+  </ul>
+
+  <h4>Risco de "superpragas" (slide 47)</h4>
+  <p>Ervas daninhas super resistentes poderiam ser selecionadas nas culturas transgênicas e causar grande dano às demais culturas que não são resistentes, já que o produtor não poderia usar o herbicida em maior concentração para erradicar a planta invasora.</p>
+
+  <p>A agricultura convencional também determina essa seleção. Para evitar: <strong>refúgios</strong> — lugares onde não seriam plantadas as culturas transgênicas, que poderiam abrigar as ervas invasoras. Esses refúgios também podem servir para os <strong>insetos que são alvos dos vegetais Bt</strong>, assim podemos também evitar a seleção de linhagens de "super insetos".</p>
+
+  <div class="esquema">
+ESTRATÉGIA DOS REFÚGIOS:
+
+       ┌─────────────────────────────┐
+       │                             │
+       │   Lavoura de MILHO Bt       │
+       │   (~80% da área)            │
+       │                             │
+       │   Lagartas suscetíveis      │
+       │   morrem ao comer este milho│
+       │                             │
+       │  ┌─────────────────────┐   │
+       │  │  REFÚGIO            │   │
+       │  │  (~20% da área)     │   │
+       │  │  Milho NORMAL       │   │
+       │  │  (sem Bt)           │   │
+       │  │                     │   │
+       │  │  Aqui as lagartas   │   │
+       │  │  suscetíveis        │   │
+       │  │  sobrevivem         │   │
+       │  └─────────────────────┘   │
+       └─────────────────────────────┘
+
+→ Lagartas RESISTENTES (raras) que nascem no milho Bt
+   acasalam com as SUSCETÍVEIS do refúgio.
+→ Filhos heterozigotos voltam a morrer com a toxina.
+→ Isso DILUI o gene de resistência na população.
+→ Atrasa a evolução de "super lagartas".
+  </div>
+
+  <h4>Riscos à saúde? (slide 48)</h4>
+  <p>O slide é categórico: <strong>"Ainda assim, não há qualquer evidência ou explicação causal que associe o consumo de transgênicos e riscos à saúde."</strong></p>
+  <p>Argumentos científicos:</p>
+  <ul>
+    <li><strong>Proteínas transgênicas são degradadas e digeridas rapidamente</strong> no nosso trato digestivo (como qualquer outra proteína).</li>
+    <li>Proteínas grandes <strong>não conseguem se acumular</strong> no nosso corpo sem serem digeridas antes.</li>
+    <li>O efeito é bem direcionado: uma proteína é uma estrutura complexa que <strong>atua em um alvo específico</strong>.</li>
+    <li>Citação direta do slide: <em>"Para atingir uma dose tóxica de Cry1Ab (uma proteína tóxica para insetos), um humano adulto teria que consumir 900.000 kg de milho Bt em um dia"</em> (Hammond and Cockburn, 2008).</li>
+  </ul>
+
+  <div class="destaque">
+    Em outras palavras: você teria que comer <strong>quase um milhão de quilos</strong> de milho transgênico em um dia para ter um efeito tóxico mensurável da proteína Cry. Obviamente, ninguém come isso. A literatura científica majoritária considera os transgênicos liberados <strong>seguros para consumo humano</strong>.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>3 gerações de benefícios: 1ª (produtor), 2ª (consumidor), 3ª (biorreatores).</li>
+      <li>Soja RR = resistente a herbicida; Milho/Algodão Bt = resistente a lagartas.</li>
+      <li>Risco de superpragas/super-insetos por seleção natural.</li>
+      <li><strong>Estratégia dos refúgios</strong> para evitar resistência.</li>
+      <li>Não há evidência de dano à saúde pelo consumo.</li>
+      <li>Fundamento ecológico: pressão seletiva → seleção de resistência.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 21: CRISPR-CAS9 ============ -->
+<section class="topico" id="sec21">
+  <h2><span class="num">21</span>CRISPR-Cas9 — Edição Gênica Moderna</h2>
+
+  <p>CRISPR-Cas9 é a tecnologia mais revolucionária da biotecnologia atual. Sua importância foi reconhecida com o <strong>Prêmio Nobel de Química em 2020</strong>, dado a Jennifer Doudna e Emmanuelle Charpentier.</p>
+
+  <div class="definicao">
+    <strong>CRISPR-Cas9 (do slide):</strong> Mecanismo <strong>mais fácil, mais barato e mais preciso</strong> de manipular o DNA. É uma técnica moderna para edição gênica que utiliza uma <strong>endonuclease (Cas9)</strong> associada a um <strong>"RNA guia"</strong> para atacar certos trechos do DNA alvo.
+  </div>
+
+  <h3>Origem natural — defesa bacteriana contra vírus</h3>
+  <p>O CRISPR-Cas9 não foi inventado do zero — foi <strong>descoberto</strong> nas bactérias! Sistemas CRISPR-Cas9 são, naturalmente, o "sistema imune adaptativo" das bactérias contra bacteriófagos (vírus que atacam bactérias).</p>
+
+  <p>Como funciona naturalmente:</p>
+  <ol>
+    <li>Quando uma bactéria é atacada por um vírus, ela "guarda" pedaços do DNA viral em uma região especial do seu genoma chamada <strong>CRISPR</strong> (Clustered Regularly Interspaced Short Palindromic Repeats — Repetições Palindrômicas Curtas Agrupadas e Regularmente Interespaçadas).</li>
+    <li>Esses pedaços viram <strong>RNAs-guia</strong>.</li>
+    <li>Se o vírus atacar de novo, o RNA-guia se liga à proteína <strong>Cas9</strong> e leva ela até a sequência viral.</li>
+    <li>Cas9 corta o DNA viral, inativando o vírus.</li>
+  </ol>
+
+  <h3>Como funciona aplicado em laboratório (do slide 54)</h3>
+
+  <ul>
+    <li>Técnica moderna para <strong>edição gênica</strong>.</li>
+    <li>Utiliza uma <strong>endonuclease (Cas9)</strong> associada a um <strong>"RNA guia"</strong> para atacar certos trechos do DNA alvo.</li>
+  </ul>
+
+  <p><strong>Possíveis aplicações</strong> (do slide):</p>
+  <ul>
+    <li><strong>Silenciamento</strong> de genes danosos (ou mesmo de cromossomos inteiros).</li>
+    <li><strong>Remoção</strong> de genes retrovirais.</li>
+    <li><strong>Interferência no processo de transcrição</strong>.</li>
+  </ul>
+
+  <h3>Esquema visual do CRISPR-Cas9</h3>
+  <div class="esquema">
+COMO O CRISPR-Cas9 ATUA:
+
+   1) Cientista projeta um RNA-guia complementar
+      à sequência alvo no DNA.
+
+      RNA-guia:        5' ─G U C A U G─ 3'
+                            │ │ │ │ │ │
+      DNA alvo (fita): 3' ─C A G U A C─ 5'   (perfeitamente complementar)
+
+   2) Cas9 + RNA-guia varrem o genoma procurando o alvo.
+
+   3) Quando o RNA-guia encontra a sequência complementar,
+      a Cas9 corta o DNA (gera quebra de dupla fita).
+
+         ╔═══════════════╗
+         ║ DNA cortado    ║
+         ║  ─────│─────  ║
+         ║       ▲       ║
+         ║   corte aqui  ║
+         ╚═══════════════╝
+
+   4) A célula tenta reparar o DNA — durante esse reparo,
+      podem ocorrer pequenas alterações na sequência,
+      INATIVANDO o gene (ou pode-se inserir uma nova
+      sequência de DNA "à força" no local).
+
+   RESULTADO: gene editado!
+  </div>
+
+  <h3>Por que é tão revolucionário?</h3>
+  <ul>
+    <li><strong>Precisão:</strong> alvo específico, definido pela sequência do RNA-guia (basta projetar um RNA complementar à região desejada).</li>
+    <li><strong>Custo:</strong> muito mais barato do que técnicas anteriores (TALENs, dedo de zinco).</li>
+    <li><strong>Velocidade:</strong> editar um gene que demoraria meses agora leva semanas.</li>
+    <li><strong>Versatilidade:</strong> funciona em quase qualquer organismo (bactérias, plantas, animais, humanos).</li>
+  </ul>
+
+  <div class="complemento">
+    Em 2018, o cientista chinês He Jiankui anunciou ter criado os primeiros <strong>bebês geneticamente editados</strong> com CRISPR (gêmeas Lulu e Nana, com o gene CCR5 alterado para resistência ao HIV). O caso causou choque mundial e foi condenado pela comunidade científica internacional. He Jiankui foi preso. A edição em embriões humanos é hoje proibida na maioria dos países por questões éticas e de segurança.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>CRISPR-Cas9 é técnica de <strong>edição gênica</strong>.</li>
+      <li>Usa uma <strong>enzima (Cas9, endonuclease)</strong> + um <strong>RNA-guia</strong>.</li>
+      <li>Origem natural: <strong>defesa bacteriana</strong> contra vírus.</li>
+      <li>Aplicações: silenciar genes, remover sequências, modificar genomas.</li>
+      <li>Vantagens: barato, rápido, preciso.</li>
+      <li>Implicações éticas (edição de embriões humanos).</li>
+    </ul>
+  </div>
+
+  <div class="pegadinha">
+    Cas9 é uma <strong>endonuclease</strong> — ou seja, é uma enzima de restrição (corta DNA), mas guiada por um RNA. É uma "enzima de restrição programável". Vestibular pode cobrar isso.
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 22: TERAPIA GÊNICA ============ -->
+<section class="topico" id="sec22">
+  <h2><span class="num">22</span>Terapia Gênica</h2>
+
+  <div class="definicao">
+    <strong>Terapia gênica:</strong> introdução de um gene funcional em células de um paciente para corrigir um defeito genético, tratando doenças hereditárias na sua raiz — ou seja, no próprio DNA.
+  </div>
+
+  <p>Diferentemente da medicina convencional, que trata os <strong>sintomas</strong> da doença (ex.: dar insulina para diabético, dar fator de coagulação para hemofílico), a terapia gênica busca <strong>curar a causa</strong> ao corrigir o gene defeituoso.</p>
+
+  <h3>Como funciona — em geral</h3>
+  <ol>
+    <li>Identificar o <strong>gene defeituoso</strong> (ou ausente) no paciente.</li>
+    <li>Obter uma <strong>cópia funcional</strong> desse gene.</li>
+    <li>Empacotar o gene em um <strong>vetor viral</strong> (geralmente vírus modificados, sem capacidade de causar doença).</li>
+    <li>Introduzir o vetor nas células do paciente (in vivo, no corpo, ou ex vivo, em células removidas).</li>
+    <li>O gene funcional passa a ser expressado, produzindo a proteína normal.</li>
+  </ol>
+
+  <div class="esquema">
+TERAPIA GÊNICA — etapas gerais:
+
+  [Paciente com doença genética]
+              │
+              ▼
+   [Identificar o gene defeituoso]
+              │
+              ▼
+   [Obter cópia funcional do gene]
+              │
+              ▼
+   [Inserir gene em VETOR VIRAL]
+   (vírus modificado, inofensivo)
+              │
+              ▼
+   [Vetor entra nas células do paciente]
+              │
+              ▼
+   [Gene funcional é expressado]
+              │
+              ▼
+   [Proteína normal é produzida]
+              │
+              ▼
+   [Doença CONTROLADA ou CURADA]
+  </div>
+
+  <h3>Casos famosos</h3>
+  <ul>
+    <li><strong>SCID (Imunodeficiência Combinada Severa)</strong> — "doença do menino da bolha". Primeira doença tratada com terapia gênica em humanos (1990).</li>
+    <li><strong>Atrofia Muscular Espinhal (AME):</strong> medicamento Zolgensma — uma única dose, custou cerca de US$ 2,1 milhões.</li>
+    <li><strong>Hemofilia:</strong> Roctavian (FDA, 2023) — vai aparecer logo abaixo na questão da UNICAMP 2025.</li>
+    <li><strong>Cegueira hereditária:</strong> Luxturna (FDA, 2017).</li>
+    <li><strong>Anemia falciforme:</strong> primeira terapia com CRISPR aprovada (Casgevy, 2023).</li>
+  </ul>
+
+  <div class="alerta">
+    <strong>Limitação importante:</strong> a terapia gênica é cara e ainda inacessível para a maioria das pessoas. Tratamentos como Zolgensma e Roctavian custam milhões de reais por dose. Esse é um tema importante de bioética e justiça em saúde.
+  </div>
+
+  <div class="vestibular">
+    <ul>
+      <li>Terapia gênica trata a <strong>causa genética</strong> da doença, não os sintomas.</li>
+      <li>Usa <strong>vetores virais</strong> para introduzir o gene funcional.</li>
+      <li>Diferença importante de transgenia: na terapia gênica, o gene introduzido é da <strong>mesma espécie</strong> (humano em humano). Não torna o paciente "transgênico".</li>
+      <li>Pode ser <strong>curativa</strong>, ao contrário de tratamentos paliativos.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 23: QUESTÕES RESOLVIDAS ============ -->
+<section class="topico" id="sec23">
+  <h2><span class="num">23</span>Questões de Vestibular Resolvidas</h2>
+
+  <h3>UNIFESP 2017 — CRISPR-Cas9</h3>
+
+  <div class="questao">
+    <h4>📝 Enunciado (do slide)</h4>
+    <p>O Sistema CRISPR-Cas9 foi desenvolvido em laboratório e é constituído de um RNA-guia (CRISPR) associado a uma enzima de restrição (Cas9). O RNA-guia é uma sequência curta de RNA sintético complementar à sequência de um determinado trecho de DNA. Quando introduzido em células vivas, o CRISPR-Cas9 detecta a sequência de DNA complementar e a enzima corta o DNA em um ponto específico. Em seguida, o sistema de reparo do DNA é ativado, unindo novamente os segmentos que foram separados. Nesse processo, podem ocorrer alterações na sequência original, causando a inativação de um gene. Sistemas semelhantes ao CRISPR-Cas9 são encontrados naturalmente em bactérias e ativados quando estas são infectadas por vírus.</p>
+
+    <p><strong>a)</strong> Cite uma vantagem que sistemas semelhantes ao CRISPR-Cas9 conferem a bactérias atacadas por um vírus cujo material genético seja o DNA. Supondo que no DNA viral exista a sequência de bases nitrogenadas <strong>CCCTATAGGG</strong>, qual será a sequência de bases no RNA-guia associado à Cas9 bacteriana?</p>
+
+    <p><strong>b)</strong> Por que a alteração na sequência de DNA provocada pelo CRISPR-Cas9 pode inativar um gene?</p>
+
+    <div class="resposta">
+      <strong>RESPOSTA OFICIAL (slide 57 e 58):</strong>
+
+      <p><strong>a)</strong> A vantagem está na possibilidade de <strong>cortar o DNA viral injetado pelo parasita</strong>. O corte do DNA inviabiliza o sucesso reprodutivo do invasor. Portanto, é um <strong>mecanismo de defesa</strong>.</p>
+
+      <p>A sequência do RNA-guia seria <strong>GGGAUAUCCC</strong>.</p>
+
+      <p><strong>Como chegamos a essa sequência?</strong></p>
+      <ul>
+        <li>DNA viral: 5'─C C C T A T A G G G─3'</li>
+        <li>O RNA-guia precisa ser complementar a esse DNA.</li>
+        <li>Aplicamos as regras: <strong>C↔G, T↔A, mas em RNA o T vira U!</strong></li>
+        <li>Então: C→G, C→G, C→G, T→A, A→U, T→A, A→U, G→C, G→C, G→C</li>
+        <li>Resultado em sentido inverso (5'→3'): <strong>GGGAUAUCCC</strong></li>
+      </ul>
+
+      <p><strong>b)</strong> Porque essas alterações podem <strong>inativar regiões promotoras</strong> ou <strong>mudar a sequência gênica</strong>, introduzindo combinações de bases sem sentido, que <strong>impedem o funcionamento do gene</strong>.</p>
+    </div>
+  </div>
+
+  <div class="pegadinha">
+    Detalhe das complementaridades quando envolve RNA: enquanto no DNA temos A↔T e C↔G, quando estamos relacionando DNA com RNA o T do DNA pareia com U do RNA (porque RNA não tem timina, tem uracila). Esse erro é clássico e derruba muita gente!
+  </div>
+
+  <h3>UNICAMP 2025 — Hemofilia e Terapia Gênica</h3>
+
+  <div class="questao">
+    <h4>📝 Enunciado (do slide)</h4>
+    <p>A hemofilia é uma doença hereditária recessiva, ligada ao cromossomo sexual X. Essa doença é resultante da deficiência nos fatores de coagulação sanguínea. A infusão intravenosa de fator de coagulação exógeno é o padrão atual de tratamento paliativo para pacientes com hemofilia. Infusões frequentes, de até três vezes por semana, são necessárias para atingir níveis que mantenham a resposta fisiológica normal do corpo para a integridade vascular e a fluidez do sangue.</p>
+
+    <p><strong>a)</strong> Em junho de 2023, a Food and Drug Administration (FDA) dos EUA aprovou o Roctavian, uma terapia gênica baseada em vetor viral para uso em adultos com hemofilia grave. Explique o princípio da terapia gênica para o tratamento da hemofilia. Por que esse método pode ser considerado curativo para a hemofilia?</p>
+
+    <p><strong>b)</strong> Considere que a filha do casal X<sup>H</sup>X<sup>H</sup> e X<sup>h</sup>Y engravidou de um homem X<sup>h</sup>Y. Qual é a probabilidade de ela ser mãe de uma criança hemofílica? Justifique sua resposta.</p>
+
+    <div class="resposta">
+      <strong>RESPOSTA — letra a (oficial, slide 63):</strong>
+
+      <p>A terapia gênica para hemofilia apresentada consiste na utilização de <strong>vetores virais</strong> para a inserção dos genes responsáveis pela produção de fatores de coagulação nas células da pessoa com hemofilia.</p>
+
+      <p>O método pode ser considerado <strong>curativo</strong> porque pessoas com hemofilia poderiam <strong>sintetizar os fatores de coagulação por meio da expressão gênica</strong>, ao invés de depender da infusão intravenosa para obtê-los.</p>
+    </div>
+
+    <div class="resposta">
+      <strong>RESPOSTA — letra b (resolução completa):</strong>
+
+      <p>O slide não trazia a resposta da letra b. <strong>Complemento para melhor compreensão:</strong> vamos resolver passo a passo.</p>
+
+      <p><strong>Genealogia:</strong></p>
+      <ul>
+        <li>Avó materna: X<sup>H</sup>X<sup>H</sup> (homozigota dominante — não carrega o alelo h)</li>
+        <li>Avô materno: X<sup>h</sup>Y (hemofílico)</li>
+      </ul>
+
+      <p><strong>Genótipo da filha (que é a "mãe da criança"):</strong></p>
+      <ul>
+        <li>Um X vem da mãe (X<sup>H</sup>X<sup>H</sup>) → só pode ser X<sup>H</sup></li>
+        <li>O outro X vem do pai (X<sup>h</sup>Y) → o X dele é X<sup>h</sup></li>
+        <li>Logo, a filha é <strong>X<sup>H</sup>X<sup>h</sup></strong> — ela é <strong>portadora</strong> (heterozigota, fenotipicamente normal).</li>
+      </ul>
+
+      <p><strong>Cruzamento dela com um homem hemofílico (X<sup>h</sup>Y):</strong></p>
+
+<pre style="font-family:monospace;background:#f0fdf4;padding:10px;border-radius:6px;">
+                Pai: X<sup>h</sup>Y
+                
+              X<sup>h</sup>           Y
+        ┌─────────────────┐
+   X<sup>H</sup> │ X<sup>H</sup>X<sup>h</sup>     │  X<sup>H</sup>Y      │ ← Filhas portadoras + filhos normais
+   X<sup>h</sup> │ X<sup>h</sup>X<sup>h</sup>     │  X<sup>h</sup>Y      │ ← Filhas hemofílicas + filhos hemofílicos
+        └─────────────────┘
+</pre>
+
+      <p><strong>Resultado dos descendentes (cada um com probabilidade 1/4):</strong></p>
+      <ul>
+        <li>X<sup>H</sup>X<sup>h</sup> (1/4) → menina portadora, normal</li>
+        <li>X<sup>H</sup>Y (1/4) → menino normal</li>
+        <li>X<sup>h</sup>X<sup>h</sup> (1/4) → menina hemofílica</li>
+        <li>X<sup>h</sup>Y (1/4) → menino hemofílico</li>
+      </ul>
+
+      <p><strong>Probabilidade de a criança ser hemofílica:</strong> 1/4 + 1/4 = <strong>2/4 = 1/2 = 50%</strong>.</p>
+
+      <p><strong>Justificativa:</strong> a mãe é heterozigota (X<sup>H</sup>X<sup>h</sup>), e cruza com um homem hemofílico (X<sup>h</sup>Y). Metade dos óvulos dela carrega X<sup>h</sup>; combinado com qualquer espermatozoide do pai (todos com alelo h ou Y), 50% dos filhos serão hemofílicos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 24: PEGADINHAS ============ -->
+<section class="topico" id="sec24">
+  <h2><span class="num">24</span>Pegadinhas e Erros Frequentes</h2>
+
+  <p>Aqui estão as confusões mais comuns nesse tema, que <strong>derrubam aluno bom</strong> em vestibular:</p>
+
+  <div class="pegadinha">
+    <strong>1.</strong> Confundir <strong>biotecnologia clássica</strong> (fermentação, melhoramento por seleção) com <strong>biotecnologia moderna</strong> (engenharia genética). Biotecnologia existe há milhares de anos; só a moderna é recente.
+  </div>
+
+  <div class="pegadinha">
+    <strong>2.</strong> Achar que <strong>amplificar DNA</strong> (PCR) significa "aumentar de tamanho". É <strong>aumentar a quantidade</strong> de cópias.
+  </div>
+
+  <div class="pegadinha">
+    <strong>3.</strong> Esquecer que a <strong>Taq polimerase</strong> resiste ao calor (vem de bactéria termófila — <em>Thermus aquaticus</em>). É por isso que ela funciona em PCR, mesmo aquecendo a 95 °C.
+  </div>
+
+  <div class="pegadinha">
+    <strong>4.</strong> Trocar <strong>RT-PCR</strong> (reverse transcription, para vírus de RNA) com <strong>qPCR/Real-Time PCR</strong> (quantitativa em tempo real). São coisas diferentes (e podem combinar: qRT-PCR).
+  </div>
+
+  <div class="pegadinha">
+    <strong>5.</strong> Pensar que o DNA migra para o polo NEGATIVO na eletroforese. <strong>Não!</strong> O DNA é negativo, então é repelido pelo polo negativo e <strong>migra para o positivo</strong>.
+  </div>
+
+  <div class="pegadinha">
+    <strong>6.</strong> Achar que fragmentos GRANDES migram MAIS na eletroforese. <strong>É o oposto!</strong> Fragmentos pequenos migram mais (passam mais fácil pela malha do gel).
+  </div>
+
+  <div class="pegadinha">
+    <strong>7.</strong> Confundir <strong>totipotente, pluripotente e multipotente</strong>. Decora os exemplos: zigoto = toti; embrionária do blastocisto = pluri; medula óssea = multi.
+  </div>
+
+  <div class="pegadinha">
+    <strong>8.</strong> Achar que iPSC = células embrionárias. <strong>Não!</strong> iPSC são células ADULTAS REPROGRAMADAS para virarem pluripotentes. Sem destruir embriões.
+  </div>
+
+  <div class="pegadinha">
+    <strong>9.</strong> Achar que receber gene da MESMA espécie torna o organismo "transgênico". <strong>NÃO É!</strong> Transgênico = recebe gene de OUTRA espécie. Mesmo gene, mesma espécie = terapia gênica.
+  </div>
+
+  <div class="pegadinha">
+    <strong>10.</strong> Confundir <strong>clonagem reprodutiva</strong> com <strong>clonagem terapêutica</strong>. Reprodutiva = gerar um indivíduo idêntico (Dolly). Terapêutica = gerar embrião só para extrair células-tronco. AMBAS proibidas em humanos no Brasil.
+  </div>
+
+  <div class="pegadinha">
+    <strong>11.</strong> Esquecer que a Lei 11.105/2005 <strong>libera</strong> transgênicos e <strong>proíbe</strong> clonagem humana. Os critérios para usar embrião em pesquisa são: 3 anos congelados + até 14 dias + originados de FIV.
+  </div>
+
+  <div class="pegadinha">
+    <strong>12.</strong> Soja RR ≠ Soja Bt. <strong>Soja RR</strong> = resistente ao herbicida glifosato (Roundup). <strong>Milho/Algodão Bt</strong> = produzem toxina contra lagartas (vinda do <em>Bacillus thuringiensis</em>).
+  </div>
+
+  <div class="pegadinha">
+    <strong>13.</strong> Achar que a toxina Bt é um "agrotóxico" colocado na planta. <strong>Não!</strong> A planta foi modificada para PRODUZIR a toxina ela mesma, no seu próprio metabolismo. É uma proteína, não um agrotóxico.
+  </div>
+
+  <div class="pegadinha">
+    <strong>14.</strong> No CRISPR-Cas9, lembrar que o RNA-guia (e não o Cas9) é quem reconhece a sequência alvo. Cas9 só corta. Eles trabalham em conjunto: RNA-guia "aponta", Cas9 "corta".
+  </div>
+
+  <div class="pegadinha">
+    <strong>15.</strong> Em complementaridade DNA-RNA: A do DNA pareia com U do RNA (não T). Esse é o erro que pegou muita gente na questão da UNIFESP 2017!
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 25: VÍDEOS ============ -->
+<section class="topico" id="sec25">
+  <h2><span class="num">25</span>Vídeos Recomendados no YouTube</h2>
+
+  <p>Aqui estão sugestões de vídeos de professores muito conhecidos pelos vestibulandos brasileiros. <strong>Importante:</strong> para garantir que você caia no vídeo certo (e mais atualizado), apresento os vídeos como sugestões de busca confiáveis. Cole na busca do YouTube exatamente como está em "<em>busca recomendada</em>" para encontrar o vídeo do professor indicado.</p>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Biotecnologia – Aula completa</div>
+    <div class="professor">👨‍🏫 Professor Paulo Jubilut – Biologia Total</div>
+    <div class="descricao">O Jubilut é o professor mais famoso de Biologia para vestibular no Brasil. Tem aulas excelentes, didáticas e profundas sobre todo o tema.</div>
+    <div><strong>Busca recomendada:</strong> "biotecnologia jubilut biologia total"</div>
+    <a href="https://www.youtube.com/results?search_query=biotecnologia+jubilut+biologia+total" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 PCR e RT-PCR – Como funcionam</div>
+    <div class="professor">👨‍🏫 Professor Rubens Oda</div>
+    <div class="descricao">Explicação detalhada das técnicas, com esquemas claros das 3 etapas (desnaturação, anelamento, extensão).</div>
+    <div><strong>Busca recomendada:</strong> "PCR rubens oda biologia"</div>
+    <a href="https://www.youtube.com/results?search_query=PCR+rubens+oda+biologia" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 DNA Recombinante e Engenharia Genética</div>
+    <div class="professor">👨‍🏫 Professor Kennedy Ramos – Curso Enem Gratuito</div>
+    <div class="descricao">Excelente para entender como o DNA recombinante funciona com plasmídeos, enzimas de restrição e DNA ligase.</div>
+    <div><strong>Busca recomendada:</strong> "DNA recombinante engenharia genética kennedy ramos"</div>
+    <a href="https://www.youtube.com/results?search_query=DNA+recombinante+engenharia+genética+kennedy+ramos" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Transgênicos – Aula completa</div>
+    <div class="professor">👨‍🏫 Professor Paulo Jubilut – Biologia Total</div>
+    <div class="descricao">Aula completíssima sobre transgênicos: conceito, soja RR, milho Bt, riscos, benefícios.</div>
+    <div><strong>Busca recomendada:</strong> "transgênicos biologia total jubilut"</div>
+    <a href="https://www.youtube.com/results?search_query=transgênicos+biologia+total+jubilut" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Clonagem e Células-Tronco</div>
+    <div class="professor">👨‍🏫 Professor Samuel Cunha – Biologia com Samuel</div>
+    <div class="descricao">Aula que cobre desde a Dolly até iPSC e a Lei de Biossegurança brasileira.</div>
+    <div><strong>Busca recomendada:</strong> "clonagem células tronco samuel cunha"</div>
+    <a href="https://www.youtube.com/results?search_query=clonagem+células+tronco+samuel+cunha" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 CRISPR-Cas9 explicado</div>
+    <div class="professor">👨‍🏫 Canal Nerdologia / Professor Atila Iamarino</div>
+    <div class="descricao">Explicação clara, atualizada e com profundidade do mecanismo CRISPR e suas aplicações. O Atila Iamarino é referência em biologia molecular para o público geral.</div>
+    <div><strong>Busca recomendada:</strong> "CRISPR Cas9 nerdologia atila iamarino"</div>
+    <a href="https://www.youtube.com/results?search_query=CRISPR+Cas9+nerdologia+atila+iamarino" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Eletroforese e Teste de Paternidade</div>
+    <div class="professor">👨‍🏫 Curso Enem Gratuito / Professores variados</div>
+    <div class="descricao">Como interpretar gel de eletroforese e resolver questões de teste de paternidade em vestibular.</div>
+    <div><strong>Busca recomendada:</strong> "eletroforese teste paternidade biologia vestibular"</div>
+    <a href="https://www.youtube.com/results?search_query=eletroforese+teste+paternidade+biologia+vestibular" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Terapia Gênica – Princípios e Aplicações</div>
+    <div class="professor">👨‍🏫 Professor Guilherme Goes</div>
+    <div class="descricao">Excelente para entender a base molecular da terapia gênica e os exemplos atuais (SMA, hemofilia, anemia falciforme).</div>
+    <div><strong>Busca recomendada:</strong> "terapia gênica guilherme goes biologia"</div>
+    <a href="https://www.youtube.com/results?search_query=terapia+gênica+guilherme+goes+biologia" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+
+  <div class="video-card">
+    <div class="titulo-video">🎬 Lei de Biossegurança e Bioética</div>
+    <div class="professor">👨‍🏫 Curso Enem Gratuito / Professores diversos</div>
+    <div class="descricao">Importante para entender o contexto legal das pesquisas com células-tronco e transgênicos no Brasil.</div>
+    <div><strong>Busca recomendada:</strong> "lei biossegurança 11105 células tronco"</div>
+    <a href="https://www.youtube.com/results?search_query=lei+biossegurança+11105+células+tronco" target="_blank">Buscar no YouTube ↗</a>
+  </div>
+</section>
+
+<!-- ============ REVISÃO FINAL ============ -->
+<section class="topico revisao-final" id="sec26">
+  <h2><span class="num">✅</span>Revisão Final dos Conceitos Principais</h2>
+
+  <p>Antes da prova, dê uma olhada rápida nestes pontos. Se você dominar tudo que está aqui, está pronto para qualquer questão de biotecnologia.</p>
+
+  <h3>1. Definição da ONU</h3>
+  <p>Biotecnologia = aplicação tecnológica que usa sistemas biológicos, organismos vivos ou seus derivados para fabricar/modificar produtos ou processos.</p>
+
+  <h3>2. Linha do tempo essencial</h3>
+  <p>6.000 anos: fermentação. Pasteur (1876): microorganismos fermentam. Karl Ereky (1919): cunha o termo. Fleming (1928): penicilina. Watson e Crick (1953): estrutura do DNA. 1978: enzimas de restrição. 1996: Dolly.</p>
+
+  <h3>3. PCR – 3 etapas</h3>
+  <p><strong>Desnaturação (~95°C)</strong> → separa as fitas. <strong>Anelamento (~50-65°C)</strong> → primers se ligam. <strong>Extensão (~72°C)</strong> → Taq polimerase sintetiza nova fita. Repete-se em ciclos = amplificação exponencial.</p>
+
+  <h3>4. RT-PCR</h3>
+  <p>PCR + transcriptase reversa. Necessária para vírus de RNA (Covid, HIV). Converte RNA em cDNA antes de amplificar.</p>
+
+  <h3>5. DNA Fingerprint</h3>
+  <p>Baseado em VNTRs (regiões repetitivas e variáveis de DNA não codificante). Cada pessoa tem padrão único, herdado dos pais. Usa enzimas de restrição + eletroforese + marcação.</p>
+
+  <h3>6. Eletroforese</h3>
+  <p>Separa DNA por tamanho usando corrente elétrica em gel. DNA é negativo → migra para o ânodo (+). Fragmentos pequenos migram MAIS; grandes migram MENOS.</p>
+
+  <h3>7. Teste de paternidade</h3>
+  <p>"O que está no filho e não está na mãe, tem que estar no pai." Exclui ou confirma paternidade com base no padrão de bandas.</p>
+
+  <h3>8. Clonagem (Dolly)</h3>
+  <p>3 ovelhas: doadora do núcleo, doadora do óvulo (enucleado), gestante. O clone fica igual à doadora do núcleo. 1/400+ tentativas. Dolly morreu jovem com problemas de saúde.</p>
+
+  <h3>9. Células-tronco</h3>
+  <p><strong>Toti</strong>potentes (TUDO, ex.: zigoto). <strong>Pluri</strong>potentes (muitas, ex.: embrionária). <strong>Multi</strong>potentes (um tecido, ex.: medula óssea).</p>
+
+  <h3>10. Lei 11.105/2005</h3>
+  <p>Embriões para pesquisa: FIV + 3 anos congelados + até 14 dias. Libera transgênicos. Proíbe clonagem humana (reprodutiva e terapêutica).</p>
+
+  <h3>11. iPSC</h3>
+  <p>Células adultas reprogramadas (Yamanaka, 2006) → pluripotentes. Sem dilemas éticos. Compatibilidade com paciente.</p>
+
+  <h3>12. DNA recombinante – ferramentas</h3>
+  <p><strong>Vetores:</strong> plasmídeos, bacteriófagos, cosmídeos. <strong>Enzimas de restrição:</strong> tesoura (cortam palíndromos). <strong>DNA ligase:</strong> cola.</p>
+
+  <h3>13. Enzimas de restrição</h3>
+  <p>Origem: bactérias (defesa contra vírus). Reconhecem sequências palindrômicas. Ex.: EcoRI corta GAATTC entre G e A. Geram extremidades coesivas (sticky) ou cegas (blunt).</p>
+
+  <h3>14. Insulina humana</h3>
+  <p>Bactéria recebe gene humano da insulina → produz a proteína idêntica → sem alergia (vs. insulina de boi/porco antigamente). Bactéria fica TRANSGÊNICA.</p>
+
+  <h3>15. Conceito de transgênico</h3>
+  <p>Recebe gene de OUTRA espécie. Mesma espécie = terapia gênica (NÃO é transgenia). Diferença que CAI MUITO!</p>
+
+  <h3>16. Transgênicos famosos</h3>
+  <p><strong>Soja RR</strong> = resistente ao herbicida glifosato. <strong>Milho/Algodão Bt</strong> = produzem toxina Cry de <em>Bacillus thuringiensis</em>, mata lagartas, inofensiva a humanos.</p>
+
+  <h3>17. Benefícios e riscos dos transgênicos</h3>
+  <p>1ª, 2ª e 3ª gerações. Risco de superpragas/super-insetos → estratégia dos refúgios. Sem evidências de dano à saúde humana.</p>
+
+  <h3>18. CRISPR-Cas9</h3>
+  <p>RNA-guia leva Cas9 (endonuclease) até a sequência-alvo. Corte → reparo → mutação ou inserção. Origem natural: defesa bacteriana contra vírus. Mais barato, rápido e preciso. Nobel 2020.</p>
+
+  <h3>19. Terapia gênica</h3>
+  <p>Insere gene FUNCIONAL (vetor viral) no paciente para corrigir doença genética. Curativa (vs. paliativa). Mesma espécie → não é transgenia. Ex.: Roctavian (hemofilia).</p>
+
+  <h3>20. Bioética</h3>
+  <p>Quando começa a vida? Embriões podem ser usados? Edição em embriões humanos é eticamente aceitável? Custos altos da terapia gênica × acesso. Esses são temas de discussão e de questões dissertativas/redação.</p>
+
+  <p style="text-align:center;font-size:1.2em;margin-top:30px;font-weight:600;">
+    🧬 Você está pronto(a) para arrasar nos vestibulares! 💪
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>📚 Aula completa de Biotecnologia | Material baseado nos slides "Biotecnologia 2026"</p>
+  <p>Preparação para vestibulares: ENEM, FUVEST, UNICAMP, UNIFESP, UERJ, UFRJ, UFMG e outros.</p>
+  <p style="margin-top:10px;font-size:0.85em;">💡 Dica final: pratique com questões antigas dos vestibulares. A teoria sem prática não fixa!</p>
+</footer>
+
+</body>
+</html>
